@@ -162,19 +162,8 @@ export default async function HomePage() {
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-4 mt-8">
-                <Link
-                  href="/neurojoint"
-                  className="px-7 py-3 bg-[#c8a87a] text-[#1a3a2a] rounded-full font-semibold text-sm hover:bg-[#d4b88a] transition-colors"
-                >
-                  Learn More
-                </Link>
-                <Link
-                  href="/about"
-                  className="px-7 py-3 border border-white/30 text-white rounded-full font-medium text-sm hover:bg-white/10 transition-colors"
-                >
-                  Learn More
-                </Link>
+              <div className="mt-8 inline-flex items-center gap-2 bg-[#c8a87a] text-[#1a3a2a] text-sm font-bold px-5 py-2.5 rounded-full">
+                Coming Soon
               </div>
             </div>
 

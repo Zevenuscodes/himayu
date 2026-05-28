@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { CheckCircle2, Leaf, FlaskConical } from 'lucide-react';
 
 const benefits = [
@@ -82,21 +81,9 @@ export default function NeurojointPage() {
             </div>
 
             {/* Coming Soon Banner */}
-            <div className="mt-8 bg-[#c8a87a]/10 border border-[#c8a87a]/40 rounded-2xl px-6 py-4 flex items-center gap-4">
-              <span className="text-2xl">🌿</span>
-              <div>
-                <p className="text-sm font-semibold text-[#8a6840]">Coming Soon</p>
-                <p className="text-xs text-[#9a8060] mt-0.5">Himayu Care Neurojoint is launching shortly. Stay tuned!</p>
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <Link
-                href="/products"
-                className="inline-block px-8 py-3.5 border border-[#4a7c59] text-[#4a7c59] rounded-full font-medium hover:bg-[#4a7c59]/5 transition-colors text-sm"
-              >
-                View All Products →
-              </Link>
+            <div className="mt-8 bg-[#4a7c59] text-white rounded-2xl px-6 py-5">
+              <p className="text-base font-bold tracking-wide">Coming Soon</p>
+              <p className="text-white/80 text-sm mt-1">Himayu Care Neurojoint is launching shortly. Stay tuned!</p>
             </div>
 
             {/* Perks */}
