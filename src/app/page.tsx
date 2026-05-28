@@ -1,65 +1,156 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { getAllProducts, ShopifyProduct } from '@/lib/shopify';
+import ProductCard from '@/components/ProductCard';
+import { Leaf, Shield, FlaskConical, BadgeCheck } from 'lucide-react';
+import HeroVisual from '@/components/HeroVisual';
 
-export default function Home() {
+export default async function HomePage() {
+  let featuredProducts: ShopifyProduct[] = [];
+  try {
+    const all = await getAllProducts();
+    // Promote Shadangpaneeya to bestseller and ensure it appears first
+    const tagged = all.map((p) =>
+      /shadang/i.test(p.title)
+        ? { ...p, tags: Array.from(new Set(['bestseller', ...p.tags])) }
+        : p
+    );
+    const bestseller = tagged.filter((p) => /shadang/i.test(p.title));
+    const rest = tagged.filter((p) => !/shadang/i.test(p.title));
+    featuredProducts = [...bestseller, ...rest].slice(0, 4);
+  } catch {
+    // show empty state until API is configured
+  }
+
+  const values = [
+    { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics.' },
+    { icon: BadgeCheck, title: 'GMP Certified', desc: 'Manufactured under strict Good Manufacturing Practice standards.' },
+    { icon: FlaskConical, title: 'Classical Formulas', desc: 'Time-tested Ayurvedic recipes backed by ancient texts and modern science.' },
+    { icon: Shield, title: 'No Side Effects', desc: '100% Ayurvedic and natural — safe for long-term use.' },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      {/* Hero */}
+      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#f5f0e8] via-[#eef5ec] to-[#f5f0e8]">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#4a7c59]/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 -left-20 w-80 h-80 bg-[#c8a87a]/10 rounded-full blur-3xl" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div>
+            <span className="inline-flex items-center gap-2 bg-[#4a7c59]/10 text-[#4a7c59] text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+              <Leaf className="w-3.5 h-3.5" /> GMP Certified Ayurvedic Medicines
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#1e1e1e] leading-[1.1] tracking-tight">
+              Nature&apos;s Cure<br />
+              <span className="text-[#4a7c59]">for Your Health</span>
+            </h1>
+            <p className="mt-6 text-lg text-[#666] leading-relaxed max-w-md">
+              Classical Ayurvedic formulas — Arks, Kwaths, Chyawanprash and herbal kits
+              crafted from pure Himalayan herbs for lasting wellness.
+            </p>
+            <div className="flex flex-wrap gap-4 mt-10">
+              <Link
+                href="/products"
+                className="px-8 py-3.5 bg-[#4a7c59] text-white rounded-full font-medium hover:bg-[#3a6347] transition-colors shadow-lg shadow-[#4a7c59]/20"
+              >
+                Shop Now
+              </Link>
+              <a
+                href="#about"
+                className="px-8 py-3.5 border border-[#4a7c59] text-[#4a7c59] rounded-full font-medium hover:bg-[#4a7c59]/5 transition-colors"
+              >
+                Our Story
+              </a>
+            </div>
+            <div className="flex gap-6 sm:gap-8 mt-10 sm:mt-12">
+              {[['2K+', 'Happy Patients'], ['15+', 'Ayurvedic Products'], ['100%', 'No Side Effects']].map(([num, label]) => (
+                <div key={label}>
+                  <p className="text-2xl font-bold text-[#2c2c2c]">{num}</p>
+                  <p className="text-xs text-[#888] mt-0.5">{label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Hero visual — 3D floating leaves */}
+          <HeroVisual />
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Values */}
+      <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#2c2c2c]">Why Himayu Care?</h2>
+          <p className="mt-3 text-[#888] max-w-md mx-auto">Every medicine is a promise — pure ingredients, classical recipes, no side effects.</p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {values.map(({ icon: Icon, title, desc }) => (
+            <div key={title} className="bg-[#faf8f3] rounded-2xl p-6 hover:shadow-md transition-shadow border border-[#ede8dc]">
+              <div className="w-11 h-11 bg-[#4a7c59]/10 rounded-xl flex items-center justify-center mb-4">
+                <Icon className="w-5 h-5 text-[#4a7c59]" />
+              </div>
+              <h3 className="font-semibold text-[#2c2c2c] mb-2">{title}</h3>
+              <p className="text-sm text-[#888] leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="bg-[#faf8f3] py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#2c2c2c]">Our Medicines</h2>
+              <p className="mt-2 text-[#888]">Classical Ayurvedic formulas trusted by thousands.</p>
+            </div>
+            <Link href="/products" className="text-sm text-[#4a7c59] font-medium hover:underline hidden sm:block">
+              View all →
+            </Link>
+          </div>
+
+          {featuredProducts.length > 0 ? (
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+              {featuredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-20 text-[#bbb]">
+              <p className="text-4xl mb-4">🌿</p>
+              <p className="text-sm">Products will appear here once your Shopify store is connected.</p>
+            </div>
+          )}
+
+          <div className="text-center mt-10 sm:hidden">
+            <Link href="/products" className="text-sm text-[#4a7c59] font-medium">View all products →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="bg-[#4a7c59] rounded-2xl sm:rounded-3xl p-8 sm:p-16 text-center text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-1/4 w-64 h-64 bg-white rounded-full -translate-y-1/2" />
+            <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-white rounded-full translate-y-1/2" />
+          </div>
+          <div className="relative">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-4">Start Your Path to Natural Healing</h2>
+            <p className="text-white/80 max-w-md mx-auto mb-8">
+              GMP-certified Ayurvedic medicines delivered to your door. Free shipping on orders over ₹999.
+            </p>
+            <Link
+              href="/products"
+              className="inline-block px-10 py-3.5 bg-white text-[#4a7c59] rounded-full font-semibold hover:bg-[#f5f0e8] transition-colors"
+            >
+              Explore Products
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
