@@ -145,7 +145,7 @@ export default async function HomePage() {
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
-                Neurojoint
+                Himayu Care Neurojoint
               </h2>
               <p className="mt-2 text-[#c8a87a] font-medium text-sm tracking-wide">Capsule · 60 Caps</p>
               <p className="mt-5 text-white/70 leading-relaxed text-sm sm:text-base max-w-md">
@@ -164,10 +164,10 @@ export default async function HomePage() {
 
               <div className="flex flex-wrap gap-4 mt-8">
                 <Link
-                  href="/products"
+                  href="/neurojoint"
                   className="px-7 py-3 bg-[#c8a87a] text-[#1a3a2a] rounded-full font-semibold text-sm hover:bg-[#d4b88a] transition-colors"
                 >
-                  Shop Now
+                  Learn More
                 </Link>
                 <Link
                   href="/about"
@@ -185,7 +185,7 @@ export default async function HomePage() {
                   <div className="w-40 h-40 sm:w-52 sm:h-52 lg:w-60 lg:h-60 bg-white/5 border border-white/10 rounded-full flex items-center justify-center">
                     <div className="text-center px-6">
                       <p className="text-5xl sm:text-6xl font-black text-white leading-none">NJ</p>
-                      <p className="text-[#6ab87f] text-xs font-medium mt-2 tracking-widest uppercase">Neurojoint</p>
+                      <p className="text-[#6ab87f] text-xs font-medium mt-2 tracking-widest uppercase">Himayu Care Neurojoint</p>
                       <div className="mt-3 flex justify-center gap-1">
                         {['Joint', 'Nerve', 'Mobility'].map((t) => (
                           <span key={t} className="text-[9px] bg-[#4a7c59]/40 text-white/80 px-1.5 py-0.5 rounded-full">{t}</span>
