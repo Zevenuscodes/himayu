@@ -64,7 +64,7 @@ export default async function HomePage() {
               </a>
             </div>
             <div className="flex gap-6 sm:gap-8 mt-10 sm:mt-12">
-              {[['2K+', 'Happy Patients'], ['15+', 'Ayurvedic Products'], ['100%', 'No Side Effects']].map(([num, label]) => (
+              {[['2K+', 'Happy Patients'], ['20+', 'Products'], ['100%', 'Natural']].map(([num, label]) => (
                 <div key={label}>
                   <p className="text-2xl font-bold text-[#2c2c2c]">{num}</p>
                   <p className="text-xs text-[#888] mt-0.5">{label}</p>
