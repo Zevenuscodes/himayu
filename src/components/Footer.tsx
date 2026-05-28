@@ -84,6 +84,11 @@ export default function Footer() {
                 Uttarakhand — 249404<br />
                 Lic. No. A-866/1982/2011
               </p>
+              <p className="text-xs text-[#9a9080] leading-relaxed mt-3">
+                Mfd. by Gayatri Herbals<br />
+                F-43, Industrial Area<br />
+                Haridwar — 249401 (Uttarakhand)
+              </p>
             </div>
           </div>
         </div>
