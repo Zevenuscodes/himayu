@@ -56,6 +56,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       netWeight: '200ml',
       form: 'Ark (Distillate)',
+      category: 'Ayurvedic Ark Formulation',
     },
   },
   {
@@ -78,6 +79,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       netWeight: '200ml',
       form: 'Ark (Distillate)',
+      category: 'Ayurvedic Ark Formulation',
     },
   },
   {
@@ -101,6 +103,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       netWeight: '200ml',
       form: 'Ark (Distillate)',
+      category: 'Ayurvedic Ark Formulation',
     },
   },
   {
@@ -166,6 +169,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       netWeight: '200ml',
       form: 'Ark (Distillate)',
+      category: 'Ayurvedic Ark Formulation',
     },
   },
   {
@@ -216,6 +220,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       netWeight: '200ml',
       form: 'Ark (Distillate)',
+      category: 'Ayurvedic Ark Formulation',
     },
   },
   {
