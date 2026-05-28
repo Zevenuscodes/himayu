@@ -25,7 +25,6 @@ export default async function HomePage() {
     { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics.' },
     { icon: BadgeCheck, title: 'GMP Certified', desc: 'Manufactured under strict Good Manufacturing Practice standards. We also offer 3rd party manufacturing at our GMP-certified facility, SIDCUL, Haridwar.' },
     { icon: FlaskConical, title: 'Premium Quality Ayurvedic Products', desc: 'Time-tested Ayurvedic recipes drawn from ancient texts and classical tradition.' },
-    { icon: Shield, title: 'No Side Effects', desc: '100% Ayurvedic and natural — safe for long-term use.' },
   ];
 
   return (
