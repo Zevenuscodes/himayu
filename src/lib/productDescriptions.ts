@@ -126,6 +126,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       netWeight: '200g',
       form: 'Kwath (Decoction Powder)',
+      category: 'Ayurvedic Classical Decoction',
     },
   },
   {
@@ -191,7 +192,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       netWeight: '50g',
       form: 'Kwath (Decoction Powder)',
-      category: 'Ayurvedic Classical Formulation',
+      category: 'Ayurvedic Classical Decoction',
     },
   },
   {
