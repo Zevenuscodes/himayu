@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: 'Himayu Care — Classical Ayurvedic Medicines',
   description: 'GMP-certified classical Ayurvedic medicines — Arks, Kwaths, Chyawanprash and herbal kits made from pure Himalayan herbs. Trusted remedies for lasting wellness.',
   keywords: 'ayurvedic medicine, dashmool ark, kasni ark, chyawanprash, pilolin kit, herbal remedies, himalayan herbs, GMP certified ayurveda',
+  icons: {
+    icon: '/logo.jpeg',
+    shortcut: '/logo.jpeg',
+    apple: '/logo.jpeg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
