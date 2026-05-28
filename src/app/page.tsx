@@ -22,8 +22,8 @@ export default async function HomePage() {
   }
 
   const values = [
-    { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics.' },
-    { icon: BadgeCheck, title: 'GMP Certified', desc: 'Manufactured under strict Good Manufacturing Practice standards. We also offer 3rd party manufacturing at our GMP-certified facility, SIDCUL, Haridwar.' },
+    { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics — 100% Ayurvedic with no side effects.' },
+    { icon: BadgeCheck, title: 'GMP Certified', desc: '3rd party Ayurvedic manufacturing at our GMP-certified, clean facility in SIDCUL, Haridwar — pure ingredients, zero contamination.' },
     { icon: FlaskConical, title: 'Premium Quality Ayurvedic Products', desc: 'Time-tested Ayurvedic recipes drawn from ancient texts and classical tradition.' },
   ];
 
@@ -84,7 +84,7 @@ export default async function HomePage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#2c2c2c]">Why Himayu Care?</h2>
           <p className="mt-3 text-[#888] max-w-md mx-auto">Every medicine is a promise — pure ingredients, classical recipes, no side effects.</p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {values.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="bg-[#faf8f3] rounded-2xl p-6 hover:shadow-md transition-shadow border border-[#ede8dc]">
               <div className="w-11 h-11 bg-[#4a7c59]/10 rounded-xl flex items-center justify-center mb-4">
