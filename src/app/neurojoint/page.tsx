@@ -31,7 +31,7 @@ export default function NeurojointPage() {
             <div className="relative w-full max-w-sm aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-[#eef5ec] to-[#f5f0e8]">
               <Image
                 src="/neurojoint.png"
-                alt="Himayu Care Neurojoint — 60 Capsules"
+                alt="Himayu Neurojoint Care — 60 Capsules"
                 fill
                 className="object-contain p-6"
                 priority
@@ -55,7 +55,7 @@ export default function NeurojointPage() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-bold text-[#2c2c2c] leading-tight">
-              Himayu Care Neurojoint
+              Himayu Neurojoint Care
             </h1>
 
             <p className="mt-5 text-[#666] leading-relaxed text-sm">
@@ -80,7 +80,7 @@ export default function NeurojointPage() {
             {/* Coming Soon Banner */}
             <div className="mt-8 bg-[#4a7c59] text-white rounded-2xl px-6 py-5">
               <p className="text-base font-bold tracking-wide">Coming Soon</p>
-              <p className="text-white/80 text-sm mt-1">Himayu Care Neurojoint is launching shortly. Stay tuned!</p>
+              <p className="text-white/80 text-sm mt-1">Himayu Neurojoint Care is launching shortly. Stay tuned!</p>
             </div>
 
             {/* Perks */}

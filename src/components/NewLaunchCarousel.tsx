@@ -7,7 +7,7 @@ import { CheckCircle2, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react'
 const slides = [
   {
     badge: 'New Launch',
-    title: 'Himayu Care Neurojoint',
+    title: 'Himayu Neurojoint Care',
     subtitle: 'Capsule · 60 Caps',
     desc: 'Our newest Ayurvedic formulation for joint pain, nerve strength and lasting mobility. Six potent herbs — Ashwagandha, Shallaki, Guggulu and more — combined under GMP-certified standards.',
     benefits: [
@@ -17,7 +17,7 @@ const slides = [
       'Muscle fatigue & post-injury recovery',
     ],
     image: '/neurojoint.png',
-    imageAlt: 'Himayu Care Neurojoint — 60 Capsules',
+    imageAlt: 'Himayu Neurojoint Care — 60 Capsules',
     status: 'Coming Soon',
     tags: ['Joint', 'Nerve', 'Mobility'],
   },
