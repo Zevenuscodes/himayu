@@ -26,11 +26,11 @@ const faqs = [
     ],
   },
   {
-    category: 'Safety & Side Effects',
+    category: 'Safety & Usage',
     items: [
       {
-        q: 'Do your medicines have any side effects?',
-        a: 'No. All Himayu Care products are 100% Ayurvedic and made from pure natural herbs with no synthetic additives. When taken as directed, they are safe for long-term use and have no known side effects.',
+        q: 'Are your medicines safe to use?',
+        a: 'All Himayu Care products are 100% Ayurvedic and made from pure natural herbs with no synthetic additives. When taken as directed, they are safe for long-term use.',
       },
       {
         q: 'Can I take Ayurvedic medicines alongside my regular medication?',

@@ -18,7 +18,7 @@ export default function Footer() {
             </div>
             <p className="text-sm leading-relaxed max-w-xs text-[#9a9080]">
               GMP-certified classical Ayurvedic medicines rooted in 5,000 years of healing tradition.
-              Pure Himalayan herbs. No side effects.
+              Pure Himalayan herbs.
             </p>
             <div className="mt-6 space-y-2 text-sm text-[#9a9080]">
               <a href="tel:+917817982004" className="flex items-center gap-2 hover:text-[#7ab897] transition-colors">

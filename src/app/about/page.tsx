@@ -20,8 +20,8 @@ const values = [
   },
   {
     icon: Shield,
-    title: 'No Side Effects',
-    desc: 'Safe for long-term use. Our medicines work with your body, not against it.',
+    title: '100% Ayurvedic',
+    desc: 'Pure formulations that work with your body, rooted in classical Ayurvedic science.',
   },
   {
     icon: Heart,

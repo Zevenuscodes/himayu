@@ -137,7 +137,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
     info: {
       short: 'Complete Ayurvedic kit (Capsule + Oil + Powder) for piles relief.',
       description:
-        'Himayu Pilolin Kit is a complete 3-in-1 Ayurvedic solution for both internal and external piles (Haemorrhoids). The combo pack includes Pilolin Capsules, Pilolin Oil, and Pilolin Powder — working together to stop bleeding, shrink piles mass, reduce swelling and ease constipation. 100% Ayurvedic and natural with no side effects.',
+        'Himayu Pilolin Kit is a complete 3-in-1 Ayurvedic solution for both internal and external piles (Haemorrhoids). The combo pack includes Pilolin Capsules, Pilolin Oil, and Pilolin Powder — working together to stop bleeding, shrink piles mass, reduce swelling and ease constipation. 100% Ayurvedic and natural.',
       benefits: [
         'Controls bleeding from piles',
         'Reduces piles mass',

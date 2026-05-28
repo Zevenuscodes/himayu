@@ -22,7 +22,7 @@ export default async function HomePage() {
   }
 
   const values = [
-    { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics — 100% Ayurvedic with no side effects.' },
+    { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics — 100% Ayurvedic.' },
     { icon: BadgeCheck, title: 'GMP Certified', desc: 'Marketed by us, manufactured by GMP-certified partners.' },
     { icon: FlaskConical, title: 'Premium Quality Ayurvedic Products', desc: 'Time-tested Ayurvedic Formulation drawn from ancient texts.' },
   ];
@@ -82,7 +82,7 @@ export default async function HomePage() {
       <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#2c2c2c]">Why Himayu Care?</h2>
-          <p className="mt-3 text-[#888] max-w-md mx-auto">Every medicine is a promise — pure ingredients, classical recipes, no side effects.</p>
+          <p className="mt-3 text-[#888] max-w-md mx-auto">Every medicine is a promise — pure ingredients, classical recipes, trusted quality.</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {values.map(({ icon: Icon, title, desc }) => (
