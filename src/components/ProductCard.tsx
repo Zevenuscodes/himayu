@@ -9,6 +9,10 @@ export default function ProductCard({ product }: { product: ShopifyProduct }) {
   const currency = product.priceRange.minVariantPrice.currencyCode;
   const info = getProductInfo(product.title);
   const shortDesc = product.description || info?.short || '';
+  const isKwath = /kwath/i.test(product.title);
+  const isArk = /ark/i.test(product.title);
+  const autoCategory = info?.category
+    ?? (isKwath ? 'Ayurvedic Classical Decoction' : isArk ? 'Ayurvedic Ark Formulation' : null);
 
   return (
     <Link href={`/products/${product.handle}`} className="group block">
@@ -39,7 +43,7 @@ export default function ProductCard({ product }: { product: ShopifyProduct }) {
       </div>
       <div className="mt-3 px-1">
         <p className="text-xs text-[#4a7c59] font-medium uppercase tracking-wider mb-1">
-          {info?.category ?? product.tags[0] ?? 'Ayurvedic'}
+          {autoCategory ?? product.tags[0] ?? 'Ayurvedic'}
         </p>
         <h3 className="text-[#2c2c2c] font-medium text-sm leading-snug group-hover:text-[#4a7c59] transition-colors">
           {product.title}
