@@ -3,6 +3,10 @@ import Image from 'next/image';
 import { ShopifyProduct } from '@/lib/shopify';
 import { getProductInfo } from '@/lib/productDescriptions';
 
+function normalizeTitle(title: string) {
+  return title.replace(/phala?\s*trikadi/gi, 'Phalatrikadi');
+}
+
 export default function ProductCard({ product }: { product: ShopifyProduct }) {
   const image = product.images.edges[0]?.node;
   const price = parseFloat(product.priceRange.minVariantPrice.amount);
@@ -11,6 +15,7 @@ export default function ProductCard({ product }: { product: ShopifyProduct }) {
   const shortDesc = product.description || info?.short || '';
   const isKwath = /kwath/i.test(product.title);
   const isArk = /ark/i.test(product.title);
+  const displayTitle = normalizeTitle(product.title);
   const autoCategory = info?.category
     ?? (isKwath ? 'Ayurvedic Classical Decoction' : isArk ? 'Ayurvedic Ark Formulation' : null);
 
@@ -46,7 +51,7 @@ export default function ProductCard({ product }: { product: ShopifyProduct }) {
           {autoCategory ?? product.tags[0] ?? 'Ayurvedic'}
         </p>
         <h3 className="text-[#2c2c2c] font-medium text-sm leading-snug group-hover:text-[#4a7c59] transition-colors">
-          {product.title}
+          {displayTitle}
         </h3>
         {shortDesc && (
           <p className="mt-1 text-[#888] text-xs leading-relaxed line-clamp-2">{shortDesc}</p>
