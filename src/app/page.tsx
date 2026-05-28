@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { getAllProducts, ShopifyProduct } from '@/lib/shopify';
 import ProductCard from '@/components/ProductCard';
-import { Leaf, Shield, FlaskConical, BadgeCheck, CheckCircle2, Sparkles } from 'lucide-react';
+import { Leaf, BadgeCheck, FlaskConical } from 'lucide-react';
 import HeroVisual from '@/components/HeroVisual';
+import NewLaunchCarousel from '@/components/NewLaunchCarousel';
 
 export default async function HomePage() {
   let featuredProducts: ShopifyProduct[] = [];
@@ -130,58 +130,9 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* New Launch — Neurojoint */}
+      {/* New Launches */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="relative bg-gradient-to-br from-[#1a3a2a] to-[#2e5c3e] rounded-3xl overflow-hidden">
-          {/* Background blobs */}
-          <div className="absolute -top-16 -right-16 w-72 h-72 bg-[#4a7c59]/30 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-10 -left-10 w-56 h-56 bg-[#c8a87a]/20 rounded-full blur-3xl pointer-events-none" />
-
-          <div className="relative grid lg:grid-cols-2 gap-8 items-center p-8 sm:p-12 lg:p-16">
-            {/* Text side */}
-            <div>
-              <div className="flex items-center gap-2 mb-5">
-                <span className="inline-flex items-center gap-1.5 bg-[#c8a87a] text-[#1a3a2a] text-xs font-bold px-3 py-1.5 rounded-full tracking-wide uppercase">
-                  <Sparkles className="w-3 h-3" /> New Launch
-                </span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
-                Himayu Care Neurojoint
-              </h2>
-              <p className="mt-2 text-[#c8a87a] font-medium text-sm tracking-wide">Capsule · 60 Caps</p>
-              <p className="mt-5 text-white/70 leading-relaxed text-sm sm:text-base max-w-md">
-                Our newest Ayurvedic formulation for joint pain, nerve strength and lasting mobility.
-                Six potent herbs — Ashwagandha, Shallaki, Guggulu and more — combined under GMP-certified standards.
-              </p>
-
-              <ul className="mt-6 space-y-2">
-                {['Joint pain & stiffness (Sandhivata)', 'Nerve weakness & neuropathy', 'Arthritis — Osteo & Rheumatoid', 'Muscle fatigue & post-injury recovery'].map((b) => (
-                  <li key={b} className="flex items-center gap-2 text-sm text-white/80">
-                    <CheckCircle2 className="w-4 h-4 text-[#6ab87f] flex-shrink-0" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 inline-flex items-center gap-2 bg-[#c8a87a] text-[#1a3a2a] text-sm font-bold px-5 py-2.5 rounded-full">
-                Coming Soon
-              </div>
-            </div>
-
-            {/* Product image */}
-            <div className="flex items-center justify-center">
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-                <Image
-                  src="/neurojoint.png"
-                  alt="Himayu Care Neurojoint — 60 Capsules"
-                  fill
-                  className="object-contain drop-shadow-2xl"
-                  sizes="(max-width: 1024px) 320px, 384px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <NewLaunchCarousel />
       </section>
 
       {/* CTA Banner */}
