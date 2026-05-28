@@ -248,7 +248,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       form: 'Capsule',
       netWeight: '60 Caps',
-      category: 'Ayurvedic Capsule',
+      category: 'Ayurvedic Proprietary Formulation',
     },
   },
 ];
