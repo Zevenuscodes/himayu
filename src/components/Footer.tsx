@@ -73,7 +73,7 @@ export default function Footer() {
             <div className="mt-6">
               <p className="text-xs text-[#9a9080] leading-relaxed">
                 Dehradun, Uttarakhand — 248001<br />
-                Manufactured by Gurukul Ayurved Pharmacy
+                Manufactured by Hans Herbals Pvt Ltd
               </p>
             </div>
           </div>
