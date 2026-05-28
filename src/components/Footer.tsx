@@ -97,8 +97,8 @@ export default function Footer() {
         <div className="border-t border-[#3a3a3a] mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#666]">
           <p>&copy; {new Date().getFullYear()} Himayu Care. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-[#7ab897] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#7ab897] transition-colors">Terms of Service</a>
+            <Link href="/privacy-policy" className="hover:text-[#7ab897] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#7ab897] transition-colors">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>
