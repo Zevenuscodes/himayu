@@ -87,7 +87,8 @@ export default function Footer() {
               <p className="text-xs text-[#9a9080] leading-relaxed mt-3">
                 Mfd. by Gayatri Herbals<br />
                 F-43, Industrial Area<br />
-                Haridwar — 249401 (Uttarakhand)
+                Haridwar — 249401 (Uttarakhand)<br />
+                Lic. No. UTTRA/AYU/10/2001/2006
               </p>
             </div>
           </div>
