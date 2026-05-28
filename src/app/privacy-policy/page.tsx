@@ -111,7 +111,7 @@ export default function PrivacyPolicyPage() {
             <p>If you have any questions about this Privacy Policy, please contact us:</p>
             <div className="mt-3 bg-[#faf8f3] border border-[#ede8dc] rounded-xl p-5 text-sm space-y-1">
               <p className="font-semibold text-[#2c2c2c]">Himayu Care</p>
-              <p>C-Block, Lane No-4, Saraswati Vihar, Ajabpur Khurd, Dehradun, Uttarakhand — 248001</p>
+              <p>H.No-286, Lane 4, C-Block, Ajabpur Khurd, Saraswati Vihar, Dehradun, Uttarakhand — 248001</p>
               <p>Email: <a href="mailto:himayucare@gmail.com" className="text-[#4a7c59]">himayucare@gmail.com</a></p>
               <p>Phone: <a href="tel:+917817982004" className="text-[#4a7c59]">+91 78179 82004</a></p>
             </div>

@@ -21,6 +21,10 @@ export default function Footer() {
               Pure Himalayan herbs.
             </p>
             <div className="mt-6 space-y-2 text-sm text-[#9a9080]">
+              <div className="flex items-start gap-2">
+                <svg className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <span>H.No-286, Lane 4, C-Block, Ajabpur Khurd<br />Saraswati Vihar, Dehradun<br />Uttarakhand — 248001</span>
+              </div>
               <a href="tel:+917817982004" className="flex items-center gap-2 hover:text-[#7ab897] transition-colors">
                 <Phone className="w-3.5 h-3.5" /> +91 78179 82004
               </a>
