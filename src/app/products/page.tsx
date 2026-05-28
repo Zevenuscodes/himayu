@@ -22,7 +22,7 @@ export default async function ProductsPage() {
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-[#2c2c2c]">Our Collection</h1>
           <p className="mt-3 text-[#888] max-w-md mx-auto">
-            Pure Ayurvedic formulas crafted with love and tradition.
+            Pure Ayurvedic formulas crafted with quality and tradition.
           </p>
         </div>
       </div>
