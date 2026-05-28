@@ -55,75 +55,75 @@ export default function NewLaunchCarousel() {
   const slide = slides[current];
 
   return (
-    <div className="relative bg-gradient-to-br from-[#1a3a2a] to-[#2e5c3e] rounded-3xl overflow-hidden">
-      <div className="absolute -top-16 -right-16 w-72 h-72 bg-[#4a7c59]/30 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-10 -left-10 w-56 h-56 bg-[#c8a87a]/20 rounded-full blur-3xl pointer-events-none" />
+    <div className="relative bg-gradient-to-br from-[#1a3a2a] to-[#2e5c3e] rounded-3xl overflow-hidden min-h-[520px] lg:min-h-[600px]">
+      <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#4a7c59]/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-16 -left-16 w-80 h-80 bg-[#c8a87a]/20 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative grid lg:grid-cols-2 gap-8 items-center p-8 sm:p-12 lg:p-16">
+      <div className="relative grid lg:grid-cols-2 gap-10 items-center p-10 sm:p-16 lg:p-20 pb-16 sm:pb-20 lg:pb-24">
         {/* Text */}
         <div>
-          <div className="flex items-center gap-2 mb-5">
-            <span className="inline-flex items-center gap-1.5 bg-[#c8a87a] text-[#1a3a2a] text-xs font-bold px-3 py-1.5 rounded-full tracking-wide uppercase">
-              <Sparkles className="w-3 h-3" /> {slide.badge}
+          <div className="flex items-center gap-2 mb-6">
+            <span className="inline-flex items-center gap-1.5 bg-[#c8a87a] text-[#1a3a2a] text-sm font-bold px-4 py-2 rounded-full tracking-wide uppercase">
+              <Sparkles className="w-3.5 h-3.5" /> {slide.badge}
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
             {slide.title}
           </h2>
-          <p className="mt-2 text-[#c8a87a] font-medium text-sm tracking-wide">{slide.subtitle}</p>
-          <p className="mt-5 text-white/70 leading-relaxed text-sm sm:text-base max-w-md">{slide.desc}</p>
+          <p className="mt-3 text-[#c8a87a] font-medium text-base tracking-wide">{slide.subtitle}</p>
+          <p className="mt-6 text-white/70 leading-relaxed text-base sm:text-lg max-w-lg">{slide.desc}</p>
 
-          <ul className="mt-6 space-y-2">
+          <ul className="mt-7 space-y-3">
             {slide.benefits.map((b) => (
-              <li key={b} className="flex items-center gap-2 text-sm text-white/80">
-                <CheckCircle2 className="w-4 h-4 text-[#6ab87f] flex-shrink-0" />
+              <li key={b} className="flex items-center gap-2.5 text-base text-white/80">
+                <CheckCircle2 className="w-5 h-5 text-[#6ab87f] flex-shrink-0" />
                 {b}
               </li>
             ))}
           </ul>
 
-          <div className="mt-8 inline-flex items-center gap-2 bg-[#c8a87a] text-[#1a3a2a] text-sm font-bold px-5 py-2.5 rounded-full">
+          <div className="mt-10 inline-flex items-center gap-2 bg-[#c8a87a] text-[#1a3a2a] text-base font-bold px-7 py-3 rounded-full">
             {slide.status}
           </div>
         </div>
 
         {/* Image */}
         <div className="flex items-center justify-center">
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+          <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem]">
             <Image
               src={slide.image}
               alt={slide.imageAlt}
               fill
               className="object-contain drop-shadow-2xl"
-              sizes="(max-width: 1024px) 320px, 384px"
+              sizes="(max-width: 640px) 288px, (max-width: 1024px) 384px, 448px"
             />
           </div>
         </div>
       </div>
 
       {/* Controls */}
-      <div className="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-3">
+      <div className="absolute bottom-6 left-0 right-0 flex items-center justify-center gap-3">
         <button
           onClick={prev}
-          className="w-7 h-7 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+          className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
           aria-label="Previous"
         >
-          <ChevronLeft className="w-4 h-4 text-white" />
+          <ChevronLeft className="w-5 h-5 text-white" />
         </button>
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => { setAuto(false); setCurrent(i); }}
-            className={`w-2 h-2 rounded-full transition-all ${i === current ? 'bg-[#c8a87a] w-5' : 'bg-white/30'}`}
+            className={`h-2.5 rounded-full transition-all ${i === current ? 'bg-[#c8a87a] w-7' : 'bg-white/30 w-2.5'}`}
             aria-label={`Slide ${i + 1}`}
           />
         ))}
         <button
           onClick={next}
-          className="w-7 h-7 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+          className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
           aria-label="Next"
         >
-          <ChevronRight className="w-4 h-4 text-white" />
+          <ChevronRight className="w-5 h-5 text-white" />
         </button>
       </div>
     </div>
