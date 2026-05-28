@@ -72,9 +72,9 @@ export default function Footer() {
             </ul>
             <div className="mt-6">
               <p className="text-xs text-[#9a9080] leading-relaxed">
+                Mfg. by Hans Herbals Pvt Ltd<br />
                 Plot No. 59, 60, 61, Sector-8A<br />
                 SIDCUL, Haridwar — 248001 (UK)<br />
-                Mfg. by Hans Herbals Pvt Ltd<br />
                 Lic. No. UK.AY-362/2017
               </p>
               <p className="text-xs text-[#9a9080] leading-relaxed mt-3">
