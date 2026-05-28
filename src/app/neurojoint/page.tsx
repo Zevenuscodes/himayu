@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { CheckCircle2, Leaf, FlaskConical } from 'lucide-react';
 
 const benefits = [
@@ -27,19 +28,15 @@ export default function NeurojointPage() {
 
           {/* Visual */}
           <div className="flex items-center justify-center">
-            <div className="relative w-full max-w-sm aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-[#1a3a2a] to-[#2e5c3e] flex items-center justify-center">
-              <div className="absolute -top-16 -right-16 w-64 h-64 bg-[#4a7c59]/20 rounded-full blur-3xl" />
-              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#c8a87a]/10 rounded-full blur-3xl" />
-              <div className="relative text-center px-8">
-                <p className="text-7xl sm:text-8xl font-black text-white leading-none">NJ</p>
-                <p className="text-[#6ab87f] text-sm font-medium mt-3 tracking-widest uppercase">Himayu Care Neurojoint</p>
-                <div className="mt-4 flex justify-center gap-2 flex-wrap">
-                  {['Joint', 'Nerve', 'Mobility'].map((t) => (
-                    <span key={t} className="text-xs bg-[#4a7c59]/40 text-white/80 px-2.5 py-1 rounded-full">{t}</span>
-                  ))}
-                </div>
-                <span className="inline-block mt-4 bg-[#c8a87a] text-[#1a3a2a] text-xs font-bold px-3 py-1 rounded-full">GMP Certified</span>
-              </div>
+            <div className="relative w-full max-w-sm aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-[#eef5ec] to-[#f5f0e8]">
+              <Image
+                src="/neurojoint.png"
+                alt="Himayu Care Neurojoint — 60 Capsules"
+                fill
+                className="object-contain p-6"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
 
