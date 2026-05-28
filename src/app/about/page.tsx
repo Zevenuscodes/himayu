@@ -35,12 +35,6 @@ const values = [
   },
 ];
 
-const milestones = [
-  { year: '2017', title: 'Founded', desc: 'Hans Herbals Pvt Ltd was established at SIDCUL, Haridwar — the heart of Uttarakhand\'s pharmaceutical belt.' },
-  { year: '2018', title: 'GMP Certification', desc: 'Received Mfg. Licence UK.AY-362/2017 under the Drugs & Cosmetics Act, validating our manufacturing standards.' },
-  { year: '2020', title: 'Product Range', desc: 'Expanded into classical Arks, Kwaths, Chyawanprash and specialised herbal kits — 15+ formulations.' },
-  { year: '2024', title: 'Himayu Care', desc: 'Launched the Himayu Care brand to bring authentic GMP-certified Ayurveda directly to patients across India.' },
-];
 
 export default function AboutPage() {
   return (
@@ -72,7 +66,7 @@ export default function AboutPage() {
                 Explore Medicines
               </Link>
               <a
-                href="#our-roots"
+                href="#manufacturing"
                 className="px-7 py-3 border border-[#4a7c59] text-[#4a7c59] rounded-full font-medium hover:bg-[#4a7c59]/5 transition-colors text-sm"
               >
                 Our Roots
@@ -123,33 +117,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section id="our-roots" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#2c2c2c]">Our Journey</h2>
-          <p className="mt-2 text-[#888] text-sm">From a manufacturing unit in Haridwar to homes across India.</p>
-        </div>
-        <div className="relative">
-          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-[#ede8dc] sm:-translate-x-px" />
-          <div className="space-y-10">
-            {milestones.map((m, i) => (
-              <div key={m.year} className={`relative flex gap-6 sm:gap-0 ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
-                {/* Dot */}
-                <div className="absolute left-4 sm:left-1/2 w-3 h-3 bg-[#4a7c59] rounded-full -translate-x-1/2 mt-1.5 ring-4 ring-[#fdfbf7]" />
-                {/* Card */}
-                <div className={`ml-12 sm:ml-0 sm:w-[calc(50%-2rem)] bg-white border border-[#ede8dc] rounded-2xl p-5 ${i % 2 === 0 ? 'sm:mr-8' : 'sm:ml-8'}`}>
-                  <span className="inline-block text-xs font-bold text-[#4a7c59] bg-[#4a7c59]/10 px-2.5 py-0.5 rounded-full mb-2">{m.year}</span>
-                  <h3 className="font-semibold text-[#2c2c2c] mb-1">{m.title}</h3>
-                  <p className="text-sm text-[#888] leading-relaxed">{m.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Manufacturing credentials */}
-      <section className="bg-[#2c2c2c] text-white py-16">
+      <section id="manufacturing" className="bg-[#2c2c2c] text-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 gap-8 items-center">
             <div>
