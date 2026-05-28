@@ -24,7 +24,7 @@ export default async function HomePage() {
   const values = [
     { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics — 100% Ayurvedic with no side effects.' },
     { icon: BadgeCheck, title: 'GMP Certified', desc: 'Marketed by us, manufactured by GMP-certified partners.' },
-    { icon: FlaskConical, title: 'Premium Quality Ayurvedic Products', desc: 'Time-tested Ayurvedic recipes drawn from ancient texts and classical tradition.' },
+    { icon: FlaskConical, title: 'Premium Quality Ayurvedic Products', desc: 'Time-tested Ayurvedic Formulation drawn from ancient texts.' },
   ];
 
   return (
