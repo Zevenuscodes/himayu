@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getAllProducts, ShopifyProduct } from '@/lib/shopify';
 import ProductCard from '@/components/ProductCard';
-import { Leaf, Shield, FlaskConical, BadgeCheck } from 'lucide-react';
+import { Leaf, Shield, FlaskConical, BadgeCheck, CheckCircle2, Sparkles } from 'lucide-react';
 import HeroVisual from '@/components/HeroVisual';
 
 export default async function HomePage() {
@@ -126,6 +126,80 @@ export default async function HomePage() {
 
           <div className="text-center mt-10 sm:hidden">
             <Link href="/products" className="text-sm text-[#4a7c59] font-medium">View all products →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* New Launch — Neurojoint */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative bg-gradient-to-br from-[#1a3a2a] to-[#2e5c3e] rounded-3xl overflow-hidden">
+          {/* Background blobs */}
+          <div className="absolute -top-16 -right-16 w-72 h-72 bg-[#4a7c59]/30 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-10 -left-10 w-56 h-56 bg-[#c8a87a]/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative grid lg:grid-cols-2 gap-8 items-center p-8 sm:p-12 lg:p-16">
+            {/* Text side */}
+            <div>
+              <div className="flex items-center gap-2 mb-5">
+                <span className="inline-flex items-center gap-1.5 bg-[#c8a87a] text-[#1a3a2a] text-xs font-bold px-3 py-1.5 rounded-full tracking-wide uppercase">
+                  <Sparkles className="w-3 h-3" /> New Launch
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+                Neurojoint
+              </h2>
+              <p className="mt-2 text-[#c8a87a] font-medium text-sm tracking-wide">Capsule · 60 Caps</p>
+              <p className="mt-5 text-white/70 leading-relaxed text-sm sm:text-base max-w-md">
+                Our newest Ayurvedic formulation for joint pain, nerve strength and lasting mobility.
+                Six potent herbs — Ashwagandha, Shallaki, Guggulu and more — combined under GMP-certified standards.
+              </p>
+
+              <ul className="mt-6 space-y-2">
+                {['Joint pain & stiffness (Sandhivata)', 'Nerve weakness & neuropathy', 'Arthritis — Osteo & Rheumatoid', 'Muscle fatigue & post-injury recovery'].map((b) => (
+                  <li key={b} className="flex items-center gap-2 text-sm text-white/80">
+                    <CheckCircle2 className="w-4 h-4 text-[#6ab87f] flex-shrink-0" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap gap-4 mt-8">
+                <Link
+                  href="/products"
+                  className="px-7 py-3 bg-[#c8a87a] text-[#1a3a2a] rounded-full font-semibold text-sm hover:bg-[#d4b88a] transition-colors"
+                >
+                  Shop Now
+                </Link>
+                <Link
+                  href="/about"
+                  className="px-7 py-3 border border-white/30 text-white rounded-full font-medium text-sm hover:bg-white/10 transition-colors"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
+
+            {/* Badge side */}
+            <div className="flex items-center justify-center">
+              <div className="relative">
+                <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 bg-white/5 border border-white/10 rounded-full flex items-center justify-center">
+                  <div className="w-40 h-40 sm:w-52 sm:h-52 lg:w-60 lg:h-60 bg-white/5 border border-white/10 rounded-full flex items-center justify-center">
+                    <div className="text-center px-6">
+                      <p className="text-5xl sm:text-6xl font-black text-white leading-none">NJ</p>
+                      <p className="text-[#6ab87f] text-xs font-medium mt-2 tracking-widest uppercase">Neurojoint</p>
+                      <div className="mt-3 flex justify-center gap-1">
+                        {['Joint', 'Nerve', 'Mobility'].map((t) => (
+                          <span key={t} className="text-[9px] bg-[#4a7c59]/40 text-white/80 px-1.5 py-0.5 rounded-full">{t}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Floating tags */}
+                <span className="absolute -top-3 -right-3 bg-[#c8a87a] text-[#1a3a2a] text-[10px] font-bold px-2.5 py-1 rounded-full shadow-lg">GMP Certified</span>
+                <span className="absolute -bottom-3 -left-3 bg-[#4a7c59] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-lg">100% Ayurvedic</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

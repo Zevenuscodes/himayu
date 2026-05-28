@@ -214,6 +214,32 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       form: 'Ark (Distillate)',
     },
   },
+  {
+    keywords: ['neurojoint', 'neuro joint', 'neurojoint'],
+    info: {
+      short: 'Advanced Ayurvedic formula for joint pain, nerve strength & mobility — our newest formulation.',
+      description:
+        'Neurojoint is Himayu Care\'s latest classical Ayurvedic formulation, developed for individuals suffering from joint pain, nerve weakness and restricted mobility. Combining time-tested herbs known for their anti-inflammatory, nerve-nourishing and Vata-pacifying properties, Neurojoint offers a natural, side-effect-free path to lasting relief.\n\nFormulated under GMP-certified conditions at Hans Herbals Pvt Ltd, Haridwar, each capsule delivers a precise, therapeutic dose of potent Himalayan botanicals.\n\nFor educational purposes only. Consult a qualified Ayurvedic physician before use.',
+      benefits: [
+        'Joint pain and stiffness (Sandhivata)',
+        'Nerve weakness and neuropathy (Vata disorders)',
+        'Arthritis — Osteoarthritis and Rheumatoid',
+        'Restricted movement and flexibility',
+        'Muscle weakness and fatigue',
+        'Post-injury recovery and inflammation',
+      ],
+      ingredients: [
+        { name: 'अश्वगंधा (Ashwagandha)', latin: 'Withania somnifera' },
+        { name: 'शल्लकी (Shallaki)', latin: 'Boswellia serrata' },
+        { name: 'गुग्गुलु (Guggulu)', latin: 'Commiphora mukul' },
+        { name: 'निर्गुण्डी (Nirgundi)', latin: 'Vitex negundo' },
+        { name: 'रास्ना (Rasna)', latin: 'Pluchea lanceolata' },
+        { name: 'एरण्ड (Eranda)', latin: 'Ricinus communis' },
+      ],
+      form: 'Capsule',
+      netWeight: '60 Caps',
+    },
+  },
 ];
 
 export function getProductInfo(title: string): ProductInfo | null {
