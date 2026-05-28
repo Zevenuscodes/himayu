@@ -77,6 +77,13 @@ export default function Footer() {
                 Mfg. by Hans Herbals Pvt Ltd<br />
                 Lic. No. UK.AY-362/2017
               </p>
+              <p className="text-xs text-[#9a9080] leading-relaxed mt-3">
+                Mfg. by Gurukul Ayurved Pharmacy<br />
+                Gurukul Mahavidyalay Jwalapur<br />
+                P.O. Gurukul Kangri, Haridwar<br />
+                Uttarakhand — 249404<br />
+                Lic. No. A-866/1982/2011
+              </p>
             </div>
           </div>
         </div>
