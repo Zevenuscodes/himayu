@@ -2,7 +2,7 @@ import { getProductByHandle } from '@/lib/shopify';
 import { getProductInfo } from '@/lib/productDescriptions';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import AddToCartButton from '@/components/AddToCartButton';
+import ProductActions from '@/components/ProductActions';
 import { Leaf, Truck, RotateCcw, Shield, CheckCircle2, FlaskConical } from 'lucide-react';
 
 export const revalidate = 60;
@@ -115,27 +115,9 @@ export default async function ProductPage({ params }: Props) {
               </div>
             )}
 
-            {/* Variants */}
-            {product.options.some((o) => o.name !== 'Title') && (
-              <div className="mt-6 space-y-4">
-                {product.options.filter((o) => o.name !== 'Title').map((option) => (
-                  <div key={option.name}>
-                    <p className="text-sm font-semibold text-[#2c2c2c] mb-2">{option.name}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {option.values.map((value) => (
-                        <button key={value} className="px-4 py-2 border border-[#e0d8cc] rounded-full text-sm text-[#555] hover:border-[#4a7c59] hover:text-[#4a7c59] transition-colors">
-                          {value}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Add to Cart */}
+            {/* Variants + Add to Cart */}
             <div className="mt-7">
-              <AddToCartButton variantId={variants[0]?.id} available={variants[0]?.availableForSale ?? false} />
+              <ProductActions variants={variants} options={product.options} />
             </div>
 
             {/* Perks */}
