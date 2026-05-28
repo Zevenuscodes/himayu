@@ -191,7 +191,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       netWeight: '50g',
       form: 'Kwath (Decoction Powder)',
-      category: 'Ayurvedic Classic Formulation',
+      category: 'Ayurvedic Classical Formulation',
     },
   },
   {
