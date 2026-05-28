@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 import { ShoppingBag, Menu, X, User } from 'lucide-react';
+import SearchOverlay from './SearchOverlay';
 
 export default function Navbar() {
   const { cartCount } = useCart();
@@ -50,8 +51,9 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Cart + Account + mobile toggle */}
+        {/* Search + Cart + Account + mobile toggle */}
         <div className="flex items-center gap-2">
+          <SearchOverlay />
           <Link href="/account" className="p-2 hover:text-[#4a7c59] transition-colors text-[#2c2c2c]" aria-label="Account">
             <User className="w-5 h-5" />
           </Link>
