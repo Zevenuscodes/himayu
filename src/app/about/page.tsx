@@ -1,0 +1,203 @@
+import Link from 'next/link';
+import { Leaf, BadgeCheck, FlaskConical, Shield, Heart, MapPin, Award } from 'lucide-react';
+import AboutVisual from '@/components/AboutVisual';
+
+const values = [
+  {
+    icon: Leaf,
+    title: '100% Natural',
+    desc: 'Every formula uses pure Himalayan herbs — no synthetic additives, no fillers, no shortcuts.',
+  },
+  {
+    icon: BadgeCheck,
+    title: 'GMP Certified',
+    desc: 'Manufactured under Good Manufacturing Practice standards, certified by the Ayurvedic authority of Uttarakhand.',
+  },
+  {
+    icon: FlaskConical,
+    title: 'Classical Formulas',
+    desc: 'Recipes drawn directly from Charaka Samhita, Ashtanga Hridayam and other foundational Ayurvedic texts.',
+  },
+  {
+    icon: Shield,
+    title: 'No Side Effects',
+    desc: 'Safe for long-term use. Our medicines work with your body, not against it.',
+  },
+  {
+    icon: Heart,
+    title: 'Patient-First',
+    desc: 'Every product is formulated with the patient\'s well-being at the centre — not trends, not margins.',
+  },
+  {
+    icon: Award,
+    title: 'Trusted Heritage',
+    desc: 'Rooted in a 5,000-year tradition of healing, adapted for the modern world without compromise.',
+  },
+];
+
+const milestones = [
+  { year: '2017', title: 'Founded', desc: 'Hans Herbals Pvt Ltd was established at SIDCUL, Haridwar — the heart of Uttarakhand\'s pharmaceutical belt.' },
+  { year: '2018', title: 'GMP Certification', desc: 'Received Mfg. Licence UK.AY-362/2017 under the Drugs & Cosmetics Act, validating our manufacturing standards.' },
+  { year: '2020', title: 'Product Range', desc: 'Expanded into classical Arks, Kwaths, Chyawanprash and specialised herbal kits — 15+ formulations.' },
+  { year: '2024', title: 'Himayu Care', desc: 'Launched the Himayu Care brand to bring authentic GMP-certified Ayurveda directly to patients across India.' },
+];
+
+export default function AboutPage() {
+  return (
+    <main className="min-h-screen bg-[#fdfbf7]">
+
+      {/* Hero */}
+      <section className="relative bg-gradient-to-br from-[#eef5ec] via-[#f5f0e8] to-[#eef5ec] pt-24 overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#4a7c59]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 -left-20 w-80 h-80 bg-[#c8a87a]/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center py-12 lg:py-0">
+          <div className="py-8 lg:py-20">
+            <span className="inline-flex items-center gap-2 bg-[#4a7c59]/10 text-[#4a7c59] text-xs font-medium px-4 py-1.5 rounded-full mb-5">
+              <Leaf className="w-3.5 h-3.5" /> Our Story
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e1e1e] leading-[1.1] tracking-tight">
+              Healing Rooted in<br />
+              <span className="text-[#4a7c59]">Ancient Wisdom</span>
+            </h1>
+            <p className="mt-6 text-[#666] leading-relaxed max-w-lg text-base sm:text-lg">
+              Himayu Care was born from a simple belief — that the purest medicines grow in the mountains,
+              and that classical Ayurvedic knowledge deserves to be preserved, not diluted.
+            </p>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <Link
+                href="/products"
+                className="px-7 py-3 bg-[#4a7c59] text-white rounded-full font-medium hover:bg-[#3a6347] transition-colors shadow-lg shadow-[#4a7c59]/20 text-sm"
+              >
+                Explore Medicines
+              </Link>
+              <a
+                href="#our-roots"
+                className="px-7 py-3 border border-[#4a7c59] text-[#4a7c59] rounded-full font-medium hover:bg-[#4a7c59]/5 transition-colors text-sm"
+              >
+                Our Roots
+              </a>
+            </div>
+          </div>
+          <AboutVisual />
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#2c2c2c] mb-6">Our Mission</h2>
+        <p className="text-[#555] leading-relaxed text-base sm:text-lg">
+          We exist to make authentic, GMP-certified Ayurvedic medicine accessible to every Indian household.
+          In a market flooded with compromised products, we hold the line — pure herbs, classical recipes,
+          honest labels. No exaggerated claims. No hidden chemicals. Just the science of plants,
+          distilled over five thousand years of practice.
+        </p>
+        <div className="mt-10 grid grid-cols-3 gap-6 max-w-md mx-auto">
+          {[['2K+', 'Patients'], ['15+', 'Medicines'], ['7+', 'Years'], ].map(([num, label]) => (
+            <div key={label} className="text-center">
+              <p className="text-3xl font-bold text-[#4a7c59]">{num}</p>
+              <p className="text-xs text-[#888] mt-1 tracking-wide uppercase">{label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-[#faf8f3] py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#2c2c2c]">What We Stand For</h2>
+            <p className="mt-2 text-[#888] text-sm max-w-sm mx-auto">Six principles that guide every product we make.</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {values.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="bg-white rounded-2xl p-5 sm:p-6 border border-[#ede8dc] hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 bg-[#4a7c59]/10 rounded-xl flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-[#4a7c59]" />
+                </div>
+                <h3 className="font-semibold text-[#2c2c2c] mb-1.5 text-sm sm:text-base">{title}</h3>
+                <p className="text-xs sm:text-sm text-[#888] leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section id="our-roots" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#2c2c2c]">Our Journey</h2>
+          <p className="mt-2 text-[#888] text-sm">From a manufacturing unit in Haridwar to homes across India.</p>
+        </div>
+        <div className="relative">
+          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-[#ede8dc] sm:-translate-x-px" />
+          <div className="space-y-10">
+            {milestones.map((m, i) => (
+              <div key={m.year} className={`relative flex gap-6 sm:gap-0 ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
+                {/* Dot */}
+                <div className="absolute left-4 sm:left-1/2 w-3 h-3 bg-[#4a7c59] rounded-full -translate-x-1/2 mt-1.5 ring-4 ring-[#fdfbf7]" />
+                {/* Card */}
+                <div className={`ml-12 sm:ml-0 sm:w-[calc(50%-2rem)] bg-white border border-[#ede8dc] rounded-2xl p-5 ${i % 2 === 0 ? 'sm:mr-8' : 'sm:ml-8'}`}>
+                  <span className="inline-block text-xs font-bold text-[#4a7c59] bg-[#4a7c59]/10 px-2.5 py-0.5 rounded-full mb-2">{m.year}</span>
+                  <h3 className="font-semibold text-[#2c2c2c] mb-1">{m.title}</h3>
+                  <p className="text-sm text-[#888] leading-relaxed">{m.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Manufacturing credentials */}
+      <section className="bg-[#2c2c2c] text-white py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid sm:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-4">
+                <MapPin className="w-3.5 h-3.5" /> Manufacturing Unit
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3">Hans Herbals Pvt Ltd</h2>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Plot No. 59, 60, 61, Sector-8A<br />
+                SIDCUL, Haridwar — 248001 (UK)<br />
+                Mfg. Licence No. UK.AY-362/2017
+              </p>
+              <p className="mt-4 text-white/50 text-xs leading-relaxed max-w-sm">
+                Located in Uttarakhand's premier pharmaceutical manufacturing zone,
+                our facility follows strict GMP guidelines under the Drugs & Cosmetics Act.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { label: 'GMP Certified', sub: 'Drugs & Cosmetics Act' },
+                { label: 'Lic. UK.AY-362/2017', sub: 'Ayurvedic Authority, UK' },
+                { label: 'SIDCUL Facility', sub: 'Haridwar, Uttarakhand' },
+                { label: '100% Ayurvedic', sub: 'No synthetic additives' },
+              ].map(({ label, sub }) => (
+                <div key={label} className="bg-white/5 rounded-2xl p-4 border border-white/10">
+                  <p className="text-sm font-semibold text-white">{label}</p>
+                  <p className="text-xs text-white/40 mt-1">{sub}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#2c2c2c] mb-3">Ready to Begin Your Journey?</h2>
+        <p className="text-[#888] text-sm mb-8 max-w-md mx-auto">
+          Browse our full range of classical Ayurvedic formulations — each one crafted with care, backed by tradition.
+        </p>
+        <Link
+          href="/products"
+          className="inline-block px-10 py-3.5 bg-[#4a7c59] text-white rounded-full font-medium hover:bg-[#3a6347] transition-colors shadow-lg shadow-[#4a7c59]/20"
+        >
+          Shop All Medicines
+        </Link>
+      </section>
+
+    </main>
+  );
+}
