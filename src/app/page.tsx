@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getAllProducts, ShopifyProduct } from '@/lib/shopify';
 import ProductCard from '@/components/ProductCard';
-import { Leaf, Shield, FlaskConical, BadgeCheck, CheckCircle2, Sparkles } from 'lucide-react';
+import { Leaf, Shield, FlaskConical, BadgeCheck, CheckCircle2, Sparkles, Factory } from 'lucide-react';
 import HeroVisual from '@/components/HeroVisual';
 
 export default async function HomePage() {
@@ -24,6 +24,7 @@ export default async function HomePage() {
   const values = [
     { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics.' },
     { icon: BadgeCheck, title: 'GMP Certified', desc: 'Manufactured under strict Good Manufacturing Practice standards.' },
+    { icon: Factory, title: '3rd Party Manufacturing', desc: 'We offer third-party manufacturing for Ayurvedic products under our GMP-certified facility at SIDCUL, Haridwar.' },
     { icon: FlaskConical, title: 'Premium Quality Ayurvedic Products', desc: 'Time-tested Ayurvedic recipes drawn from ancient texts and classical tradition.' },
     { icon: Shield, title: 'No Side Effects', desc: '100% Ayurvedic and natural — safe for long-term use.' },
   ];
