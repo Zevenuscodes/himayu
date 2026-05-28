@@ -24,7 +24,7 @@ export default async function HomePage() {
   const values = [
     { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics.' },
     { icon: BadgeCheck, title: 'GMP Certified', desc: 'Manufactured under strict Good Manufacturing Practice standards.' },
-    { icon: FlaskConical, title: 'Classical Formulas', desc: 'Time-tested Ayurvedic recipes backed by ancient texts and modern science.' },
+    { icon: FlaskConical, title: 'Classical Formulas', desc: 'Time-tested Ayurvedic recipes drawn from ancient texts and classical tradition.' },
     { icon: Shield, title: 'No Side Effects', desc: '100% Ayurvedic and natural — safe for long-term use.' },
   ];
 
@@ -103,7 +103,7 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#2c2c2c]">Our Medicines</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#2c2c2c]">Our Premium Quality Products</h2>
               <p className="mt-2 text-[#888]">Classical Ayurvedic formulas trusted by thousands.</p>
             </div>
             <Link href="/products" className="text-sm text-[#4a7c59] font-medium hover:underline hidden sm:block">
