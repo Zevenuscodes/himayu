@@ -13,7 +13,7 @@ const faqs = [
       },
       {
         q: 'What are Kwaths (Decoctions)?',
-        a: 'Kwaths are classical Ayurvedic decoction powders. You soak the powder in water, boil it down to one-quarter of the original volume, filter and drink. This method extracts the full therapeutic properties of the herbs. Examples include Shadangpaaniya and Phala Trikadi Kwath.',
+        a: 'Kwaths are classical Ayurvedic decoction powders. You soak the powder in water, boil it down to one-quarter of the original volume, filter and drink. This method extracts the full therapeutic properties of the herbs. Examples include Shadangpaaniya and Phalatrikadi Kwath.',
       },
       {
         q: 'What is Chyawanprash and who can take it?',
@@ -46,7 +46,7 @@ const faqs = [
     category: 'Usage & Dosage',
     items: [
       {
-        q: 'How do I prepare Phala Trikadi Kwath?',
+        q: 'How do I prepare Phalatrikadi Kwath?',
         a: 'Soak 5g of the powder in 200ml of water for 8 hours (preferably overnight). Boil the soaked mixture until only one-quarter (50ml) remains. Filter and drink warm on an empty stomach, or as advised by your physician.',
       },
       {
