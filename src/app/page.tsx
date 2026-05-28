@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getAllProducts, ShopifyProduct } from '@/lib/shopify';
 import ProductCard from '@/components/ProductCard';
-import { Leaf, BadgeCheck, FlaskConical } from 'lucide-react';
+import { Leaf, BadgeCheck, FlaskConical, Shield, Truck, Handshake } from 'lucide-react';
 import HeroVisual from '@/components/HeroVisual';
 import NewLaunchCarousel from '@/components/NewLaunchCarousel';
 
@@ -23,9 +23,12 @@ export default async function HomePage() {
   }
 
   const values = [
-    { icon: Leaf, title: '100% Natural', desc: 'Pure Himalayan herbs, free from harmful additives or synthetics — 100% Ayurvedic.' },
-    { icon: BadgeCheck, title: 'GMP Certified', desc: 'Marketed by us, manufactured by GMP-certified partners.' },
-    { icon: FlaskConical, title: 'Premium Quality Ayurvedic Products', desc: 'Time-tested Ayurvedic Formulation drawn from ancient texts.' },
+    { icon: Leaf, title: 'Authentic Ayurvedic Formulations', desc: 'Carefully selected formulations inspired by classical Ayurvedic principles and ancient texts.' },
+    { icon: BadgeCheck, title: 'GMP-Certified Manufacturing', desc: 'Marketed by us, manufactured through trusted GMP-certified facilities following strict quality standards.' },
+    { icon: Shield, title: 'Quality Assurance', desc: 'Each product is developed with a focus on purity, safety and effectiveness — no compromises.' },
+    { icon: FlaskConical, title: 'Premium Packaging & Branding', desc: 'Professional packaging solutions designed to enhance brand identity and market appeal.' },
+    { icon: Truck, title: 'Reliable Supply Network', desc: 'Efficient distribution and business support across PAN India.' },
+    { icon: Handshake, title: 'Trusted Business Relationships', desc: 'Committed to transparency, professionalism and long-term partnerships with our customers.' },
   ];
 
   return (
@@ -47,8 +50,8 @@ export default async function HomePage() {
               <span className="text-[#4a7c59]">for Your Health</span>
             </h1>
             <p className="mt-6 text-lg text-[#666] leading-relaxed max-w-md">
-              Classical Ayurvedic formulas — Arks, Kwaths, Chyawanprash and herbal kits
-              crafted from pure Himalayan herbs for lasting wellness.
+              Transforming Ayurvedic wisdom into trusted wellness brands — classical formulas,
+              GMP-certified quality, and pure Himalayan herbs for lasting health.
             </p>
             <div className="flex flex-wrap gap-4 mt-10">
               <Link
@@ -83,9 +86,9 @@ export default async function HomePage() {
       <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#2c2c2c]">Why Himayu Care?</h2>
-          <p className="mt-3 text-[#888] max-w-md mx-auto">Every medicine is a promise — pure ingredients, classical recipes, trusted quality.</p>
+          <p className="mt-3 text-[#888] max-w-lg mx-auto">Pure Ayurveda. Trusted Quality. — Authentic formulations backed by GMP-certified manufacturing and a commitment to lasting wellness.</p>
         </div>
-        <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {values.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="bg-[#faf8f3] rounded-2xl p-6 hover:shadow-md transition-shadow border border-[#ede8dc]">
               <div className="w-11 h-11 bg-[#4a7c59]/10 rounded-xl flex items-center justify-center mb-4">
