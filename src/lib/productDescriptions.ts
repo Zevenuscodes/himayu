@@ -23,6 +23,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
         'Kindles digestive fire (जाठराग्निदीपन)',
         'Regulates Vata dosha',
       ],
+      category: 'Ayurvedic Classical Formulation',
     },
   },
   {
