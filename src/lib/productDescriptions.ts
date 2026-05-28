@@ -107,11 +107,11 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
     },
   },
   {
-    keywords: ['phaltrikadi', 'phaltrikadi kwath', 'फ़लत्रिकादि', 'मधुमेह'],
+    keywords: ['phala trikadi', 'phaltrikadi', 'phala trikadi kwath', 'phaltrikadi kwath', 'फलत्रिकादि', 'फ़लत्रिकादि', 'मधुमेह'],
     info: {
       short: 'Classical decoction for diabetes, fatty liver & renal health.',
       description:
-        'Phaltrikadi Kwath (Madhumeh) is a classical Ayurvedic decoction (Kwath) used in the management of Diabetes mellitus, Liver disease, Fatty liver, Renal disease and Constipation. Direction: Soak 5gm in 200ml water for 8 hours, boil till ¼ remains, filter and drink after filtering or as advised by physician.',
+        'Phala Trikadi Kwath (Madhumeh) is a classical Ayurvedic decoction (Kwath) used in the management of Diabetes mellitus, Liver disease, Fatty liver, Renal disease and Constipation. Direction: Soak 5gm in 200ml water for 8 hours, boil till ¼ remains, filter and drink after filtering or as advised by physician.',
       benefits: [
         'Diabetes mellitus (Madhumeh)',
         'Liver disease & fatty liver',
