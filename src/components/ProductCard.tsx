@@ -39,7 +39,7 @@ export default function ProductCard({ product }: { product: ShopifyProduct }) {
       </div>
       <div className="mt-3 px-1">
         <p className="text-xs text-[#4a7c59] font-medium uppercase tracking-wider mb-1">
-          {product.tags[0] ?? 'Ayurvedic'}
+          {info?.category ?? product.tags[0] ?? 'Ayurvedic'}
         </p>
         <h3 className="text-[#2c2c2c] font-medium text-sm leading-snug group-hover:text-[#4a7c59] transition-colors">
           {product.title}

@@ -5,6 +5,7 @@ export interface ProductInfo {
   ingredients?: { name: string; latin?: string; quantity?: string }[];
   form?: string;
   netWeight?: string;
+  category?: string;
 }
 
 const catalogue: { keywords: string[]; info: ProductInfo }[] = [
@@ -189,6 +190,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       netWeight: '50g',
       form: 'Kwath (Decoction Powder)',
+      category: 'Ayurvedic Classic Formulation',
     },
   },
   {
