@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllProducts, ShopifyProduct } from '@/lib/shopify';
 import ProductCard from '@/components/ProductCard';
 import { Leaf, Shield, FlaskConical, BadgeCheck, CheckCircle2, Sparkles } from 'lucide-react';
@@ -167,25 +168,16 @@ export default async function HomePage() {
               </div>
             </div>
 
-            {/* Badge side */}
+            {/* Product image */}
             <div className="flex items-center justify-center">
-              <div className="relative">
-                <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 bg-white/5 border border-white/10 rounded-full flex items-center justify-center">
-                  <div className="w-40 h-40 sm:w-52 sm:h-52 lg:w-60 lg:h-60 bg-white/5 border border-white/10 rounded-full flex items-center justify-center">
-                    <div className="text-center px-6">
-                      <p className="text-5xl sm:text-6xl font-black text-white leading-none">NJ</p>
-                      <p className="text-[#6ab87f] text-xs font-medium mt-2 tracking-widest uppercase">Himayu Care Neurojoint</p>
-                      <div className="mt-3 flex justify-center gap-1">
-                        {['Joint', 'Nerve', 'Mobility'].map((t) => (
-                          <span key={t} className="text-[9px] bg-[#4a7c59]/40 text-white/80 px-1.5 py-0.5 rounded-full">{t}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Floating tags */}
-                <span className="absolute -top-3 -right-3 bg-[#c8a87a] text-[#1a3a2a] text-[10px] font-bold px-2.5 py-1 rounded-full shadow-lg">GMP Certified</span>
-                <span className="absolute -bottom-3 -left-3 bg-[#4a7c59] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-lg">100% Ayurvedic</span>
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                <Image
+                  src="/neurojoint.png"
+                  alt="Himayu Care Neurojoint — 60 Capsules"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  sizes="(max-width: 1024px) 320px, 384px"
+                />
               </div>
             </div>
           </div>
