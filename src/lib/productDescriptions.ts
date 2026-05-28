@@ -148,6 +148,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       ],
       form: 'Kit (Capsule + Oil + Powder)',
       netWeight: '60 Caps + 100ml Oil + 100g Powder',
+      category: 'Ayurvedic Proprietary Formulation',
     },
   },
   {
