@@ -72,8 +72,10 @@ export default function Footer() {
             </ul>
             <div className="mt-6">
               <p className="text-xs text-[#9a9080] leading-relaxed">
-                Dehradun, Uttarakhand — 248001<br />
-                Manufactured by Hans Herbals Pvt Ltd
+                Plot No. 59, 60, 61, Sector-8A<br />
+                SIDCUL, Haridwar — 248001 (UK)<br />
+                Mfg. by Hans Herbals Pvt Ltd<br />
+                Lic. No. UK.AY-362/2017
               </p>
             </div>
           </div>
