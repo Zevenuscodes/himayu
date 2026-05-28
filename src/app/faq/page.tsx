@@ -13,7 +13,7 @@ const faqs = [
       },
       {
         q: 'What are Kwaths (Decoctions)?',
-        a: 'Kwaths are classical Ayurvedic decoction powders. You soak the powder in water, boil it down to one-quarter of the original volume, filter and drink. This method extracts the full therapeutic properties of the herbs. Examples include Shadangpaneeya and Phaltrikadi Kwath.',
+        a: 'Kwaths are classical Ayurvedic decoction powders. You soak the powder in water, boil it down to one-quarter of the original volume, filter and drink. This method extracts the full therapeutic properties of the herbs. Examples include Shadangpaaniya and Phaltrikadi Kwath.',
       },
       {
         q: 'What is Chyawanprash and who can take it?',
@@ -50,8 +50,8 @@ const faqs = [
         a: 'Soak 5g of the powder in 200ml of water for 8 hours (preferably overnight). Boil the soaked mixture until only one-quarter (50ml) remains. Filter and drink warm on an empty stomach, or as advised by your physician.',
       },
       {
-        q: 'How do I take Shadangpaneeya?',
-        a: 'Shadangpaneeya is a six-herb decoction powder. Typically it is boiled in water and consumed as a warm drink during fever or excessive heat. Dosage and preparation can vary — follow the instructions on the pack or as directed by your physician.',
+        q: 'How do I take Shadangpaaniya?',
+        a: 'Shadangpaaniya is a six-herb decoction powder. Typically it is boiled in water and consumed as a warm drink during fever or excessive heat. Dosage and preparation can vary — follow the instructions on the pack or as directed by your physician.',
       },
       {
         q: 'How long does it take to see results with Ayurvedic medicines?',

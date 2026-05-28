@@ -8,7 +8,7 @@ export default async function HomePage() {
   let featuredProducts: ShopifyProduct[] = [];
   try {
     const all = await getAllProducts();
-    // Promote Shadangpaneeya to bestseller and ensure it appears first
+    // Promote Shadangpaaniya to bestseller and ensure it appears first
     const tagged = all.map((p) =>
       /shadang/i.test(p.title)
         ? { ...p, tags: Array.from(new Set(['bestseller', ...p.tags])) }

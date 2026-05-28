@@ -167,11 +167,11 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
     },
   },
   {
-    keywords: ['shadangpaneeya', 'shadang', 'षडंगपानीय'],
+    keywords: ['shadangpaaniya', 'shadang', 'षडंगपानीय'],
     info: {
       short: 'Classical six-herb decoction for fever, excessive thirst & digestive imbalance — referenced in Charaka Samhita.',
       description:
-        'Shadangpaneeya is a classical Ayurvedic formulation composed of six potent herbs, referenced in Charaka Samhita (Chikitsa Sthana, Jwara Chikitsa Adhyaya) as a medicated water that is cooling, thirst-quenching and fever-relieving in nature.\n\nMore than a medicinal drink, Shadangpaneeya is an integral part of Ayurvedic living. It works to pacify the body\'s internal heat, restore Pitta balance and support digestive equilibrium. In conditions such as fever — common yet debilitating — it offers a simple, natural and highly effective remedy. In an age where chemical-based cooling beverages have become the norm, Ayurveda offers Shadangpaneeya as a pure, time-tested and enduring alternative.\n\nFor educational purposes only. Consult a qualified Ayurvedic physician before use.',
+        'Shadangpaaniya is a classical Ayurvedic formulation composed of six potent herbs, referenced in Charaka Samhita (Chikitsa Sthana, Jwara Chikitsa Adhyaya) as a medicated water that is cooling, thirst-quenching and fever-relieving in nature.\n\nMore than a medicinal drink, Shadangpaaniya is an integral part of Ayurvedic living. It works to pacify the body\'s internal heat, restore Pitta balance and support digestive equilibrium. In conditions such as fever — common yet debilitating — it offers a simple, natural and highly effective remedy. In an age where chemical-based cooling beverages have become the norm, Ayurveda offers Shadangpaaniya as a pure, time-tested and enduring alternative.\n\nFor educational purposes only. Consult a qualified Ayurvedic physician before use.',
       benefits: [
         'All types of fever (Jwara)',
         'Pittadushti — vitiation of Pitta dosha',
