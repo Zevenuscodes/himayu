@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAllProducts } from '@/lib/shopify';
+import { medicinePages } from '@/lib/medicinePages';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = 'https://himayucare.com';
@@ -15,6 +16,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/terms`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
   ];
 
+  const medicinePageUrls: MetadataRoute.Sitemap = medicinePages.map((m) => ({
+    url: `${base}/medicines/${m.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+
   try {
     const products = await getAllProducts();
     const productPages: MetadataRoute.Sitemap = products.map((p) => ({
@@ -23,8 +31,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     }));
-    return [...staticPages, ...productPages];
+    return [...staticPages, ...medicinePageUrls, ...productPages];
   } catch {
-    return staticPages;
+    return [...staticPages, ...medicinePageUrls];
   }
 }
