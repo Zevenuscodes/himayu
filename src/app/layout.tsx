@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { CartProvider } from '@/context/CartContext';
+import CookieConsent from '@/components/CookieConsent';
 
 const playfair = Playfair_Display({
   variable: '--font-playfair',
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           <div className="flex-1">{children}</div>
           <Footer />
+          <CookieConsent />
         </CartProvider>
       </body>
     </html>
