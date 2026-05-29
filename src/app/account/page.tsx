@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation';
 import { getCustomerToken, logout } from './actions';
 import { getCustomer } from '@/lib/shopify';
 import Image from 'next/image';
-import { User, Package, MapPin, LogOut } from 'lucide-react';
+import { User, Package, MapPin, LogOut, Truck } from 'lucide-react';
 
 export default async function AccountPage() {
   const token = await getCustomerToken();
@@ -69,22 +69,48 @@ export default async function AccountPage() {
                         <p className="font-bold text-[#2c2c2c] text-sm">
                           {order.currentTotalPrice.currencyCode} {parseFloat(order.currentTotalPrice.amount).toFixed(2)}
                         </p>
-                        <span className={`inline-block text-[10px] font-medium px-2 py-0.5 rounded-full mt-1 ${
-                          order.financialStatus === 'PAID'
-                            ? 'bg-green-100 text-green-700'
-                            : 'bg-yellow-100 text-yellow-700'
-                        }`}>
-                          {order.financialStatus}
-                        </span>
+                        <div className="flex gap-1.5 mt-1 justify-end flex-wrap">
+                          <span className={`inline-block text-[10px] font-medium px-2 py-0.5 rounded-full ${
+                            order.financialStatus === 'PAID'
+                              ? 'bg-green-100 text-green-700'
+                              : 'bg-yellow-100 text-yellow-700'
+                          }`}>
+                            {order.financialStatus}
+                          </span>
+                          <span className={`inline-block text-[10px] font-medium px-2 py-0.5 rounded-full ${
+                            order.fulfillmentStatus === 'FULFILLED'
+                              ? 'bg-blue-100 text-blue-700'
+                              : order.fulfillmentStatus === 'PARTIALLY_FULFILLED'
+                              ? 'bg-orange-100 text-orange-700'
+                              : 'bg-[#f0ebe0] text-[#888]'
+                          }`}>
+                            {order.fulfillmentStatus === 'FULFILLED' ? 'Shipped'
+                              : order.fulfillmentStatus === 'PARTIALLY_FULFILLED' ? 'Partially Shipped'
+                              : 'Processing'}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div className="border-t border-[#f0ebe0] pt-3 space-y-1">
+
+                    <div className="border-t border-[#f0ebe0] pt-3 space-y-1 mb-4">
                       {order.lineItems.edges.map(({ node }) => (
                         <p key={node.title} className="text-xs text-[#666]">
                           {node.quantity}× {node.title}
                         </p>
                       ))}
                     </div>
+
+                    {order.statusUrl && (
+                      <a
+                        href={order.statusUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-xs font-medium text-[#4a7c59] border border-[#4a7c59]/30 px-4 py-2 rounded-full hover:bg-[#4a7c59]/5 transition-colors"
+                      >
+                        <Truck className="w-3.5 h-3.5" />
+                        Track Order
+                      </a>
+                    )}
                   </div>
                 ))}
               </div>

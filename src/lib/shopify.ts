@@ -198,9 +198,9 @@ export async function getCustomer(accessToken: string) {
         orders(first: 10, sortKey: PROCESSED_AT, reverse: true) {
           edges {
             node {
-              id orderNumber processedAt financialStatus fulfillmentStatus
+              id orderNumber processedAt financialStatus fulfillmentStatus statusUrl
               currentTotalPrice { amount currencyCode }
-              lineItems(first: 3) {
+              lineItems(first: 5) {
                 edges { node { title quantity } }
               }
             }
@@ -270,6 +270,7 @@ export interface ShopifyOrder {
   processedAt: string;
   financialStatus: string;
   fulfillmentStatus: string;
+  statusUrl: string;
   currentTotalPrice: { amount: string; currencyCode: string };
   lineItems: { edges: { node: { title: string; quantity: number } }[] };
 }
