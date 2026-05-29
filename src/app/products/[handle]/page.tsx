@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import { getProductByHandle } from '@/lib/shopify';
-import { getProductInfo } from '@/lib/productDescriptions';
-import { notFound } from 'next/navigation';
+import { getProductByHandle, getAllProducts } from '@/lib/shopify';
+import { getProductInfo, productMatchesQuery } from '@/lib/productDescriptions';
+import { notFound, redirect } from 'next/navigation';
 import Image from 'next/image';
 import ProductActions from '@/components/ProductActions';
 import { Leaf, Truck, RotateCcw, Shield, CheckCircle2, FlaskConical } from 'lucide-react';
@@ -44,7 +44,16 @@ export default async function ProductPage({ params }: Props) {
     notFound();
   }
 
-  if (!product) notFound();
+  // If not found by exact handle, search all products for a fuzzy title match
+  if (!product) {
+    try {
+      const all = await getAllProducts();
+      const query = handle.replace(/-/g, ' ');
+      const match = all.find((p) => productMatchesQuery(p.title, query));
+      if (match) redirect(`/products/${match.handle}`);
+    } catch {}
+    notFound();
+  }
 
   const images = product.images.edges.map((e) => e.node);
   const variants = product.variants.edges.map((e) => e.node);
