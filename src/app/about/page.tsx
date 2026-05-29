@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Leaf, BadgeCheck, FlaskConical, Shield, Heart, MapPin, Award } from 'lucide-react';
 import AboutVisual from '@/components/AboutVisual';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Himayu Care is a GMP-certified Ayurvedic healthcare company based in Dehradun. We deliver authentic classical Ayurvedic formulations made from pure Himalayan herbs across India.',
+  keywords: 'about himayu care, ayurvedic company dehradun, GMP certified ayurvedic medicine, himalayan herbal company, authentic ayurveda india',
+};
 
 const values = [
   {

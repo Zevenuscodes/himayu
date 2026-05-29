@@ -31,8 +31,37 @@ export default async function HomePage() {
     { icon: Handshake, title: 'Trusted Business Relationships', desc: 'Committed to transparency, professionalism and long-term partnerships with our customers.' },
   ];
 
+  const orgSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Himayu Care',
+    url: 'https://himayucare.com',
+    logo: 'https://himayucare.com/logo.jpeg',
+    description: 'GMP-certified classical Ayurvedic medicines made from pure Himalayan herbs.',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'H.No-286, Lane 4, C-Block, Ajabpur Khurd, Saraswati Vihar',
+      addressLocality: 'Dehradun',
+      addressRegion: 'Uttarakhand',
+      postalCode: '248001',
+      addressCountry: 'IN',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+91-78179-82004',
+      contactType: 'customer service',
+      availableLanguage: ['English', 'Hindi'],
+    },
+    sameAs: [
+      'https://www.instagram.com/himayucare',
+      'https://youtube.com/@himayucare',
+      'https://www.facebook.com/share/1DYQE9NdS8/',
+    ],
+  };
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#f5f0e8] via-[#eef5ec] to-[#f5f0e8]">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

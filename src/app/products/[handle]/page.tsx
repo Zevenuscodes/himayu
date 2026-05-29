@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { getProductByHandle } from '@/lib/shopify';
 import { getProductInfo } from '@/lib/productDescriptions';
 import { notFound } from 'next/navigation';
@@ -9,6 +10,28 @@ export const revalidate = 60;
 
 interface Props {
   params: Promise<{ handle: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { handle } = await params;
+  try {
+    const product = await getProductByHandle(handle);
+    if (!product) return {};
+    const info = getProductInfo(product.title);
+    const image = product.images.edges[0]?.node.url;
+    return {
+      title: product.title,
+      description: product.description || info?.short || `Buy ${product.title} — GMP-certified Ayurvedic medicine from Himayu Care.`,
+      openGraph: {
+        title: product.title,
+        description: product.description || info?.short || '',
+        images: image ? [{ url: image }] : [],
+        type: 'website',
+      },
+    };
+  } catch {
+    return {};
+  }
 }
 
 export default async function ProductPage({ params }: Props) {
@@ -36,8 +59,27 @@ export default async function ProductPage({ params }: Props) {
     { icon: Shield, label: '100% authentic & GMP certified' },
   ];
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.title,
+    description: description,
+    image: images.map((i) => i.url),
+    brand: { '@type': 'Brand', name: 'Himayu Care' },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: currency,
+      price: price.toFixed(2),
+      availability: variants[0]?.availableForSale
+        ? 'https://schema.org/InStock'
+        : 'https://schema.org/OutOfStock',
+      seller: { '@type': 'Organization', name: 'Himayu Care' },
+    },
+  };
+
   return (
     <main className="min-h-screen pt-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
 

@@ -1,8 +1,15 @@
+import type { Metadata } from 'next';
 import { getAllProducts, ShopifyProduct } from '@/lib/shopify';
 import ProductCard from '@/components/ProductCard';
 import { Leaf } from 'lucide-react';
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+  title: 'All Ayurvedic Medicines',
+  description: 'Shop GMP-certified Ayurvedic medicines online — Arks, Kwaths, Chyawanprash, Herbal Capsules and more. Pure Himalayan herbs, delivered across India.',
+  keywords: 'buy ayurvedic medicine online, ayurvedic ark, kwath powder, shadangpaaniya, kasni ark, dashmool ark, phalatrikadi kwath, chyawanprash, pilolin piles kit',
+};
 
 export default async function ProductsPage() {
   let products: ShopifyProduct[] = [];
