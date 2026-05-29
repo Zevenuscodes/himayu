@@ -5,7 +5,7 @@ import { Search, X, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ShopifyProduct } from '@/lib/shopify';
-import { getProductInfo } from '@/lib/productDescriptions';
+import { getProductInfo, productMatchesQuery } from '@/lib/productDescriptions';
 
 export default function SearchOverlay() {
   const [open, setOpen] = useState(false);
@@ -46,7 +46,7 @@ export default function SearchOverlay() {
   const results = query.trim().length < 1
     ? products.slice(0, 6)
     : products.filter((p) =>
-        p.title.toLowerCase().includes(query.toLowerCase()) ||
+        productMatchesQuery(p.title, query) ||
         p.description?.toLowerCase().includes(query.toLowerCase()) ||
         getProductInfo(p.title)?.short?.toLowerCase().includes(query.toLowerCase())
       );

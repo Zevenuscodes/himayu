@@ -260,3 +260,15 @@ export function getProductInfo(title: string): ProductInfo | null {
   );
   return match?.info ?? null;
 }
+
+export function productMatchesQuery(title: string, query: string): boolean {
+  const q = query.toLowerCase().trim();
+  if (!q) return true;
+  const t = title.toLowerCase();
+  if (t.includes(q)) return true;
+  const entry = catalogue.find(({ keywords }) =>
+    keywords.some((kw) => t.includes(kw.toLowerCase()))
+  );
+  if (!entry) return false;
+  return entry.keywords.some((kw) => kw.toLowerCase().includes(q) || q.includes(kw.toLowerCase()));
+}
