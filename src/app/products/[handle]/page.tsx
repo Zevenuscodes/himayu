@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getProductByHandle, getAllProducts } from '@/lib/shopify';
 import { getProductInfo, productMatchesQuery } from '@/lib/productDescriptions';
+import { medicinePages } from '@/lib/medicinePages';
 import { notFound, redirect } from 'next/navigation';
 import Image from 'next/image';
 import ProductActions from '@/components/ProductActions';
@@ -44,11 +45,22 @@ export default async function ProductPage({ params }: Props) {
     notFound();
   }
 
-  // If not found by exact handle, search all products for a fuzzy title match
+  // If not found by exact handle, check medicine pages first (static, no API needed)
   if (!product) {
+    const query = handle.replace(/-/g, ' ');
+    const medMatch = medicinePages.find(
+      (m) =>
+        m.slug === handle ||
+        m.shopifyHandle === handle ||
+        m.keywords.some((kw) => kw.toLowerCase() === query.toLowerCase()) ||
+        m.name.toLowerCase().includes(query.toLowerCase()) ||
+        query.toLowerCase().includes(m.name.toLowerCase().split(' ')[0])
+    );
+    if (medMatch) redirect(`/medicines/${medMatch.slug}`);
+
+    // Fallback: fuzzy search across live Shopify products
     try {
       const all = await getAllProducts();
-      const query = handle.replace(/-/g, ' ');
       const match = all.find((p) => productMatchesQuery(p.title, query));
       if (match) redirect(`/products/${match.handle}`);
     } catch {}
