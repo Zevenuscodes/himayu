@@ -9,7 +9,8 @@ function normalizeTitle(title: string) {
 
 export default function ProductCard({ product }: { product: ShopifyProduct }) {
   const image = product.images.edges[0]?.node;
-  const price = parseFloat(product.priceRange.minVariantPrice.amount);
+  const originalPrice = parseFloat(product.priceRange.minVariantPrice.amount);
+  const price = originalPrice * 0.9;
   const currency = product.priceRange.minVariantPrice.currencyCode;
   const info = getProductInfo(product.title);
   const shortDesc = product.description || info?.short || '';
@@ -35,6 +36,9 @@ export default function ProductCard({ product }: { product: ShopifyProduct }) {
             <span className="text-4xl">🌿</span>
           </div>
         )}
+        <span className="absolute top-3 left-3 bg-red-500 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">
+          10% OFF
+        </span>
         {product.tags.includes('bestseller') && (
           <span className="absolute top-3 left-3 bg-[#4a7c59] text-white text-[11px] font-medium px-2.5 py-1 rounded-full">
             Bestseller
@@ -57,9 +61,14 @@ export default function ProductCard({ product }: { product: ShopifyProduct }) {
           <p className="mt-1 text-[#888] text-xs leading-relaxed line-clamp-2">{shortDesc}</p>
         )}
         <div className="mt-2 flex items-center justify-between gap-2">
-          <p className="text-[#2c2c2c] font-semibold text-sm">
-            {currency} {price.toFixed(2)}
-          </p>
+          <div className="flex items-center gap-1.5">
+            <p className="text-[#2c2c2c] font-bold text-sm">
+              {currency} {price.toFixed(2)}
+            </p>
+            <p className="text-[#aaa] text-xs line-through">
+              {currency} {originalPrice.toFixed(2)}
+            </p>
+          </div>
           {info?.netWeight && (
             <span className="text-xs font-bold text-[#2c2c2c] bg-[#e8e0d0] px-2 py-0.5 rounded-full whitespace-nowrap">
               {info.netWeight}
