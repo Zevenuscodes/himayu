@@ -325,7 +325,279 @@ Phalatrikadi Kwath works by balancing blood sugar levels, supporting liver detox
       { q: 'Can I take Phalatrikadi Kwath alongside my diabetes medication?', a: 'Please consult your physician before combining with diabetes medication as it may affect blood sugar levels synergistically.' },
     ],
     shopifyHandle: 'phalatrikadi-kwath',
-    keywords: ['phalatrikadi kwath', 'फलत्रिकादि क्वाथ', 'phalatrikadi', 'ayurvedic medicine for diabetes', 'madhumeh ayurveda', 'diabetes kwath'],
+    keywords: ['phalatrikadi kwath', 'फलत्रिकादि क्वाथ', 'phalatrikadi', 'ayurvedic medicine for diabetes', 'madhumeh ayurveda', 'diabetes kwath', 'phaltrikadi kwath kamala', 'jaundice ayurvedic kwath'],
+  },
+  {
+    slug: 'trinpanchmool-kwath',
+    name: 'Trinpanchmool Kwath',
+    hindiName: 'तृण पंचमूल क्वाथ',
+    tagline: 'Five Grass Roots Decoction for Kidney, Urinary & Gynaecological Health',
+    category: 'Ayurvedic Classical Decoction',
+    form: 'Kwath (Decoction Powder)',
+    netWeight: '200g',
+    description: 'Classical five-root Ayurvedic decoction for kidney disease, urinary disorders and gynaecological conditions.',
+    longDescription: `Trinpanchmool Kwath (तृण पंचमूल क्वाथ) is a classical Ayurvedic formulation prepared from five sacred grass roots, referenced in classical Ayurvedic texts for its powerful action on the kidneys, urinary system and female reproductive system. The "Trin Panchamool" (five grass roots) are revered in Ayurveda for their cooling, diuretic and purifying properties.
+
+This decoction is particularly effective in conditions involving the urinary tract — from kidney stones and UTIs to urinary incontinence. It also has significant benefits for gynaecological disorders, working to balance Apana Vata (the downward energy governing excretion and reproduction).
+
+Himayu Care's Trinpanchmool Kwath is prepared under GMP-certified conditions by Gurukul Ayurved Pharmacy, Haridwar, ensuring authentic formulation.`,
+    benefits: [
+      'Kidney disease and renal support',
+      'Urinary tract disorders and UTI',
+      'Urinary incontinence and frequency',
+      'Gynaecological disorders',
+      'Vrikka Dosha (kidney imbalance)',
+      'Mootra Sambandhi Vikar (urinary conditions)',
+    ],
+    ingredients: [
+      { name: 'Kush', latin: 'Desmostachya bipinnata', quantity: '20% each' },
+      { name: 'Kash', latin: 'Saccharum spontaneum', quantity: '20% each' },
+      { name: 'Shar', latin: 'Saccharum Munja', quantity: '20% each' },
+      { name: 'Kandokshu', latin: 'Saccharum officinarum', quantity: '20% each' },
+      { name: 'Darbh', latin: 'Desmostachya bipinnata', quantity: '20% each' },
+    ],
+    dosage: 'Soak 5g of Trinpanchmool Kwath powder in 200ml of water for 8 hours. Boil until only 50ml (one-quarter) remains. Filter and drink warm, or as directed by your Ayurvedic physician.',
+    faqs: [
+      { q: 'What is Trinpanchmool Kwath used for?', a: 'Trinpanchmool Kwath is used for kidney disease, urinary tract disorders and gynaecological conditions. The five grass roots work together to support the urinary and reproductive systems.' },
+      { q: 'Is Trinpanchmool Kwath good for kidney stones?', a: 'Yes, Trinpanchmool Kwath has diuretic and purifying properties that support kidney health and may help in conditions involving urinary tract calculi. Consult your physician for kidney stones.' },
+      { q: 'Can women take Trinpanchmool Kwath?', a: 'Yes, Trinpanchmool Kwath is especially beneficial for women with gynaecological disorders. Consult an Ayurvedic physician for specific conditions.' },
+    ],
+    shopifyHandle: 'trinpanchmool-kwath',
+    keywords: ['trinpanchmool kwath', 'तृण पंचमूल क्वाथ', 'trin panchmool', 'kidney ayurvedic medicine', 'urinary ayurvedic kwath', 'gynaecological ayurveda'],
+  },
+  {
+    slug: 'shirishadi-kwath',
+    name: 'Shirishadi Kwath',
+    hindiName: 'शिरीषादि क्वाथ',
+    tagline: 'Classical Decoction for Allergies, Asthma & Respiratory Conditions',
+    category: 'Ayurvedic Classical Decoction',
+    form: 'Kwath (Decoction Powder)',
+    netWeight: '200g',
+    description: 'Four-herb Ayurvedic decoction for allergic rhinitis, sinusitis, bronchial asthma and urticaria — referenced in Sushruta Samhita.',
+    longDescription: `Shirishadi Kwath (शिरीषादि क्वाथ) is a classical Ayurvedic decoction formulation referenced in Sushruta Samhita, traditionally used for allergic and respiratory conditions. The formulation derives its name from Shirish (Albizia lebbeck) — one of Ayurveda's most potent anti-allergic herbs, known for its ability to desensitise the body to allergens and reduce hypersensitivity reactions.
+
+Combined with Mulethi (Glycyrrhiza glabra), Chotikateri (Solanum surattense) and Vasa (Adhatoda vasica), Shirishadi Kwath creates a powerful anti-allergic, bronchodilatory and expectorant combination that addresses the root cause of allergic conditions — not just the symptoms.
+
+Himayu Care's Shirishadi Kwath is prepared under GMP-certified conditions by Hans Herbals Pvt. Ltd., Haridwar.`,
+    benefits: [
+      'Allergic rhinitis and sinusitis',
+      'Bronchial asthma and breathlessness',
+      'Cough — chronic and acute',
+      'Urticaria (hives) and allergic skin disease',
+      'Sheetapitta (cold urticaria)',
+      'Respiratory hypersensitivity conditions',
+    ],
+    ingredients: [
+      { name: 'Shirish', latin: 'Albizia lebbock', quantity: '25% each' },
+      { name: 'Mulethi', latin: 'Glycyrrhiza glabra', quantity: '25% each' },
+      { name: 'Chotikateri', latin: 'Solanum surattense', quantity: '25% each' },
+      { name: 'Vasa', latin: 'Adhatoda vasica', quantity: '25% each' },
+    ],
+    dosage: 'Soak 5g of Shirishadi Kwath powder in 200ml of water for 8 hours. Boil until one-quarter remains. Filter and drink warm, or as directed by your Ayurvedic physician.',
+    faqs: [
+      { q: 'What is Shirishadi Kwath used for?', a: 'Shirishadi Kwath is used for allergic conditions including rhinitis, sinusitis, bronchial asthma, urticaria and allergic skin disease. It is one of Ayurveda\'s most effective anti-allergy formulations.' },
+      { q: 'Is Shirishadi Kwath good for asthma?', a: 'Yes, Shirishadi Kwath contains Vasa (Adhatoda vasica) and Mulethi which are classical bronchodilators and expectorants, making it highly effective for bronchial asthma.' },
+      { q: 'Can Shirishadi Kwath help with skin allergies?', a: 'Yes, particularly Shirish (Albizia lebbeck) is known for its powerful anti-allergic properties that help with urticaria and allergic skin conditions.' },
+    ],
+    shopifyHandle: 'shirishadi-kwath',
+    keywords: ['shirishadi kwath', 'शिरीषादि क्वाथ', 'shirishadi', 'allergy ayurvedic medicine', 'asthma ayurveda', 'rhinitis sinusitis ayurvedic treatment', 'shirish kwath'],
+  },
+  {
+    slug: 'mansyadi-kwath',
+    name: 'Mansyadi Kwath',
+    hindiName: 'मांस्यादि क्वाथ',
+    tagline: 'Classical Decoction for Anxiety, Depression, OCD & Insomnia',
+    category: 'Ayurvedic Classical Decoction',
+    form: 'Kwath (Decoction Powder)',
+    netWeight: '100g',
+    description: 'Three-herb Ayurvedic decoction for psychiatric disorders — anxiety, depression, OCD, insomnia and arthritis.',
+    longDescription: `Mansyadi Kwath (मांस्यादि क्वाथ) is a classical Ayurvedic formulation referenced in Sidhayog Sangrah, used for the management of psychiatric and neurological disorders. The formulation is centred around Jatamansi (Nardostachys jatamansi) — one of Ayurveda's most powerful brain tonics and nerve sedatives — combined with Ashwagandha and Khurasani Ajwain for a comprehensive neuropsychiatric action.
+
+Mansyadi Kwath works by calming vitiated Vata and Pitta in the mind, reducing neurological hyperactivity and restoring mental equilibrium. It is particularly effective for anxiety, depression, obsessive-compulsive disorder (OCD), psychosis, arthritis and insomnia (Anidra).
+
+This formulation contains concentrated Jatamansi at 61.54%, making it highly potent. It must be used under Ayurvedic physician guidance.`,
+    benefits: [
+      'Anxiety and generalised anxiety disorder',
+      'Depression and low mood',
+      'OCD (Obsessive-Compulsive Disorder)',
+      'Psychosis and psychiatric disorders',
+      'Insomnia (Anidra) — promotes sleep',
+      'Arthritis and joint conditions',
+      'Mental fatigue and cognitive stress',
+    ],
+    ingredients: [
+      { name: 'Jatamansi', latin: 'Nardostachys jatamansi', quantity: '61.54%' },
+      { name: 'Ashwagandha', latin: 'Withania somnifera', quantity: '30.76%' },
+      { name: 'Khurasani Ajwain', latin: 'Hyoscyamus Niger', quantity: '7.70%' },
+    ],
+    dosage: 'Soak 2g of Mansyadi Kwath powder in 200ml of water for 8 hours. Boil until one-quarter remains. Filter and drink warm. Or as directed by your Ayurvedic physician. Use under physician guidance.',
+    faqs: [
+      { q: 'What is Mansyadi Kwath used for?', a: 'Mansyadi Kwath is used for psychiatric conditions including anxiety, depression, OCD, psychosis and insomnia. It is a classical Ayurvedic formulation that calms the nervous system.' },
+      { q: 'Is Mansyadi Kwath safe for anxiety?', a: 'Yes, Mansyadi Kwath contains Jatamansi — one of Ayurveda\'s most effective herbs for anxiety and nervous disorders. Use under Ayurvedic physician guidance.' },
+      { q: 'Can Mansyadi Kwath help with insomnia?', a: 'Yes, Mansyadi Kwath has a calming effect on the nervous system and helps regulate sleep. Jatamansi is a classical Ayurvedic sedative herb.' },
+    ],
+    shopifyHandle: 'mansyadi-kwath',
+    keywords: ['mansyadi kwath', 'मांस्यादि क्वाथ', 'mansyadi', 'anxiety ayurvedic medicine', 'depression ayurveda', 'insomnia ayurvedic treatment', 'jatamansi kwath', 'OCD ayurveda'],
+  },
+  {
+    slug: 'panchvalkal-kwath',
+    name: 'Panchvalkal Kwath',
+    hindiName: 'पंचवल्कल क्वाथ',
+    tagline: 'Five Sacred Fig Barks Decoction for Skin, Diabetes & Infertility',
+    category: 'Ayurvedic Classical Decoction',
+    form: 'Kwath (Decoction Powder)',
+    netWeight: '200g',
+    description: 'Classical five fig-bark decoction for skin diseases, ulcers, diabetes, infertility and gynaecological disorders.',
+    longDescription: `Panchvalkal Kwath (पंचवल्कल क्वाथ) is a classical Ayurvedic formulation prepared from the barks (valkal) of five sacred fig trees, referenced in Bhavaprakasha Nighantu. The "Pancha" (five) Ficus species have been used in Ayurveda for thousands of years for their astringent, wound-healing, anti-diabetic and hormonal-balancing properties.
+
+This formulation is particularly known for its action on the reproductive system — it has been used traditionally in conditions of infertility and gynaecological disorders. The combination of five Ficus barks creates a powerful astringent and tissue-healing action that is effective for both internal ulcers and external skin conditions.
+
+Panchvalkal Kwath is also one of the classical Ayurvedic formulations used in the management of diabetes, working to regulate blood sugar through its bitter and astringent properties.`,
+    benefits: [
+      'Skin diseases — eczema, psoriasis, dermatitis',
+      'Ulcers — gastric and skin ulcers',
+      'Diabetes mellitus (Madhumeh)',
+      'Infertility — male and female',
+      'Gynaecological disorders',
+      'Bandhyatva Rog (reproductive disorders)',
+    ],
+    ingredients: [
+      { name: 'Vata (Bargad)', latin: 'Ficus benghalensis', quantity: '20% each' },
+      { name: 'Peepal', latin: 'Ficus religiosa', quantity: '20% each' },
+      { name: 'Udumber (Gular)', latin: 'Ficus glomoata', quantity: '20% each' },
+      { name: 'Plaksha (Pakar)', latin: 'Ficus infectoria', quantity: '20% each' },
+      { name: 'Pareesh', latin: 'Thespesia populnea', quantity: '20% each' },
+    ],
+    dosage: 'Soak 5g of Panchvalkal Kwath powder in 200ml of water for 8 hours. Boil until one-quarter remains. Filter and drink warm, or as directed by your Ayurvedic physician.',
+    faqs: [
+      { q: 'What is Panchvalkal Kwath used for?', a: 'Panchvalkal Kwath is used for skin diseases, ulcers, diabetes, infertility and gynaecological disorders. The five Ficus bark combination has powerful astringent and healing properties.' },
+      { q: 'Is Panchvalkal Kwath good for infertility?', a: 'Panchvalkal Kwath is a classical Ayurvedic formulation used for gynaecological disorders and infertility. It helps balance reproductive hormones and supports uterine health. Consult an Ayurvedic physician for specific treatment.' },
+      { q: 'Can Panchvalkal Kwath help with diabetes?', a: 'Yes, Panchvalkal Kwath has anti-diabetic properties from its five Ficus bark combination. It should be used alongside diet modification and medical supervision.' },
+    ],
+    shopifyHandle: 'panchvalkal-kwath',
+    keywords: ['panchvalkal kwath', 'पंचवल्कल क्वाथ', 'panchvalkal', 'skin disease ayurvedic medicine', 'infertility ayurveda', 'diabetes kwath', 'five fig bark ayurveda'],
+  },
+  {
+    slug: 'punarnavashtak-kwath',
+    name: 'Punarnavashtak Kwath',
+    hindiName: 'पुनर्नवाष्टक क्वाथ',
+    tagline: 'Eight-Herb Decoction for Liver, Kidney, Jaundice & Joint Disorders',
+    category: 'Ayurvedic Classical Decoction',
+    form: 'Kwath (Decoction Powder)',
+    netWeight: '200g',
+    description: 'Eight-herb classical decoction for liver disorder, jaundice, kidney disease, urinary tract infection and diabetes.',
+    longDescription: `Punarnavashtak Kwath (पुनर्नवाष्टक क्वाथ) is a classical Ayurvedic decoction referenced in Ayurved Sar Sangrah, centred around Punarnava (Boerhavia diffusa) — the body-renewing herb. Combined with seven additional classical herbs, this formulation creates a powerful multi-organ supporting remedy for liver disease, kidney disorders, jaundice, urinary tract infections, diabetes and joint disorders.
+
+The formulation's primary action is hepatoprotective (liver-protecting) and nephroprotective (kidney-protecting). Punarnava's diuretic action is enhanced by Guduchi's immune-modulating properties and Neem's blood-purifying action, creating a synergistic effect on organ health and detoxification.
+
+Himayu Care's Punarnavashtak Kwath is prepared under GMP-certified conditions by Hans Herbals Pvt. Ltd., Haridwar, maintaining the classical eight-herb ratio as described in Ayurved Sar Sangrah.`,
+    benefits: [
+      'Liver disorder and liver protection',
+      'Jaundice (Kamala/Peeliya) — highly effective',
+      'Kidney disorder and renal support',
+      'Urinary tract infection (UTI)',
+      'Diabetes mellitus',
+      'Joint disorder and arthritis',
+      'Blood purification',
+    ],
+    ingredients: [
+      { name: 'Punarnava', latin: 'Boerhavia diffusa', quantity: '12.5% each' },
+      { name: 'Kutki', latin: 'Androgophis panniculata', quantity: '12.5% each' },
+      { name: 'Guduchi', latin: 'Tinospora cordifolia', quantity: '12.5% each' },
+      { name: 'Devdaru', latin: 'Cedrus deodara', quantity: '12.5% each' },
+      { name: 'Hareetaki', latin: 'Terminalia chebula', quantity: '12.5% each' },
+      { name: 'Neem', latin: 'Azadirachta indica', quantity: '12.5% each' },
+      { name: 'Sonth', latin: 'Zingiber officinalis', quantity: '12.5% each' },
+      { name: 'Patolpatra', latin: 'Luffa accutangula', quantity: '12.5% each' },
+    ],
+    dosage: 'Soak 10g of Punarnavashtak Kwath powder in 200ml of water for 8 hours. Boil until one-quarter remains. Filter and drink warm, or as directed by your Ayurvedic physician.',
+    faqs: [
+      { q: 'What is Punarnavashtak Kwath used for?', a: 'Punarnavashtak Kwath is used for liver disorders, jaundice, kidney disease, urinary tract infections, diabetes and joint disorders. It is a classical eight-herb formulation from Ayurved Sar Sangrah.' },
+      { q: 'Is Punarnavashtak Kwath good for jaundice?', a: 'Yes, Punarnavashtak Kwath is particularly effective for jaundice (Kamala). Punarnava and Neem work together to support liver detoxification and bile function.' },
+      { q: 'Can Punarnavashtak Kwath help with kidney disease?', a: 'Yes, the formulation is traditionally used for kidney disorders and urinary tract infections. Punarnava is a classical nephroprotective herb. Use under physician supervision for chronic kidney conditions.' },
+    ],
+    shopifyHandle: 'punarnavashtak-kwath',
+    keywords: ['punarnavashtak kwath', 'पुनर्नवाष्टक क्वाथ', 'punarnavashtak', 'punarnavastak', 'liver ayurvedic medicine', 'jaundice kwath ayurveda', 'kidney ayurvedic decoction'],
+  },
+  {
+    slug: 'varunadi-kwath',
+    name: 'Varunadi Kwath',
+    hindiName: 'वरुणादि क्वाथ',
+    tagline: 'Classical Decoction for Kidney Stones, Renal Calculi & Uterine Disorders',
+    category: 'Ayurvedic Classical Decoction',
+    form: 'Kwath (Decoction Powder)',
+    netWeight: '200g',
+    description: 'Four-herb Ayurvedic decoction for kidney stones, urinary tract calculi, cysts and uterine diseases.',
+    longDescription: `Varunadi Kwath (वरुणादि क्वाथ) is a classical Ayurvedic decoction formulation referenced in Ayurved Sar Sangrah, centred around Varun Ki Chaal (Crataeva nurvala bark). Varun is one of Ayurveda's most powerful herbs for the urinary system, particularly known for its ability to dissolve kidney and bladder stones (renal calculi).
+
+The formulation combines Varun with Sonth (ginger), Gokhuru (Tribulus terrestris) and Passan Bhed (stone-breaker herb) — creating a synergistic combination that simultaneously dissolves urinary calculi, reduces inflammation, promotes diuresis and supports kidney function.
+
+Varunadi Kwath is particularly effective for kidney stones, urinary tract calculi, bladder cysts and uterine diseases. Its name "Varunadi" (starting with Varun) signifies its primary therapeutic action on the urinary system.`,
+    benefits: [
+      'Kidney stones (renal calculi) and dissolution',
+      'Urinary tract calculi and obstruction',
+      'Bladder cysts',
+      'Uterine diseases and disorders',
+      'Liver disorder and hepatic support',
+      'Urinary tract infections and difficulty urinating',
+    ],
+    ingredients: [
+      { name: 'Varun Ki Chaal', latin: 'Crataeva nurvala', quantity: '25% each' },
+      { name: 'Sonth', latin: 'Zingiber officinale', quantity: '25% each' },
+      { name: 'Gokhuru', latin: 'Tribulus terrestris', quantity: '25% each' },
+      { name: 'Passan Bhed', latin: 'Gentiana kurroo', quantity: '25% each' },
+    ],
+    dosage: 'Soak 10g of Varunadi Kwath powder in 200ml of water for 8 hours. Boil until one-quarter remains. Filter and drink warm, or as directed by your Ayurvedic physician.',
+    faqs: [
+      { q: 'Is Varunadi Kwath good for kidney stones?', a: 'Yes, Varunadi Kwath is one of the most effective Ayurvedic formulations for kidney stones. Varun (Crataeva nurvala) and Passan Bhed have lithotriptic (stone-dissolving) properties.' },
+      { q: 'What is Varunadi Kwath used for?', a: 'Varunadi Kwath is used for kidney stones, urinary tract calculi, cysts, uterine diseases and liver disorders. It is referenced in Ayurved Sar Sangrah as a classical urinary system formulation.' },
+      { q: 'How long does it take for Varunadi Kwath to work on kidney stones?', a: 'Results vary by stone size. Small stones may dissolve in 4–8 weeks of regular use. Always monitor with ultrasound and consult your physician.' },
+    ],
+    shopifyHandle: 'varunadi-kwath',
+    keywords: ['varunadi kwath', 'वरुणादि क्वाथ', 'varunadi', 'kidney stones ayurvedic medicine', 'renal calculi ayurveda', 'pathri ayurvedic treatment', 'varun crataeva'],
+  },
+  {
+    slug: 'dashmool-kwath',
+    name: 'Dashmool Kwath',
+    hindiName: 'दशमूल क्वाथ',
+    tagline: 'Ten Sacred Roots Decoction for Arthritis, Asthma & Postpartum Recovery',
+    category: 'Ayurvedic Classical Decoction',
+    form: 'Kwath (Decoction Powder)',
+    netWeight: '200g',
+    description: 'Classical ten-root Ayurvedic decoction powder for arthritis, asthma, postpartum disorders and Vata imbalance.',
+    longDescription: `Dashmool Kwath (दशमूल क्वाथ) is one of the most celebrated classical formulations in Ayurveda, prepared from the "Dashmool" — the ten sacred roots described in Ayurvedic texts. Referenced in Ayurved Sar Sangrah, this formulation brings together all ten roots in their authentic ratio as a decoction powder.
+
+The ten roots are divided into two groups — the five large roots (Brihad Panchamool: Bael, Agnimanth, Shyonak, Pata, Gambhari) and five small roots (Laghu Panchamool: Brhati, Kantakari, Shalpami, Prishnparmi, Gokshru) — each group contributing complementary properties to make this a comprehensive Vata-pacifying and rejuvenating formulation.
+
+Dashmool Kwath is particularly renowned for its use in arthritis, respiratory conditions and as a classical postpartum tonic for new mothers. Himayu Care's Dashmool Kwath contains all ten roots at 2.5% each, prepared under GMP-certified conditions by Gurukul Ayurved Pharmacy, Haridwar.`,
+    benefits: [
+      'Arthritis and joint pain (Sandhivata)',
+      'Asthma and respiratory disorders',
+      'Postpartum recovery (Prasuti Rog)',
+      'Phlegm and Kapha-related conditions',
+      'Swelling and oedema',
+      'General weakness and Vata imbalance',
+    ],
+    ingredients: [
+      { name: 'Bilava (Bael)', latin: 'Aegle marmelos', quantity: '2.5% each' },
+      { name: 'Agnimanth', latin: 'Premna mucroranta', quantity: '2.5% each' },
+      { name: 'Shyonak', latin: 'Orexylum indicum', quantity: '2.5% each' },
+      { name: 'Pata', latin: 'Stereospermum suaveolens', quantity: '2.5% each' },
+      { name: 'Gambhan (Gambhari)', latin: 'Gmelina arborea', quantity: '2.5% each' },
+      { name: 'Brhati', latin: 'Solanum indicum', quantity: '2.5% each' },
+      { name: 'Kantakari', latin: 'Solanum surattense', quantity: '2.5% each' },
+      { name: 'Shalpami', latin: 'Desmodium gangeticum', quantity: '2.5% each' },
+      { name: 'Prishnparmi', latin: 'Uraria picta', quantity: '2.5% each' },
+      { name: 'Gokshru', latin: 'Tribulus terrestris', quantity: '2.5% each' },
+    ],
+    dosage: 'Soak 10g of Dashmool Kwath powder in 200ml of water for 8 hours. Boil until one-quarter remains. Filter and drink warm, or as directed by your Ayurvedic physician.',
+    faqs: [
+      { q: 'What is Dashmool Kwath?', a: 'Dashmool Kwath is a classical Ayurvedic decoction prepared from the ten sacred roots. It is used for arthritis, asthma, postpartum recovery and Vata disorders.' },
+      { q: 'What is the difference between Dashmool Kwath and Dashmool Ark?', a: 'Dashmool Kwath is a decoction powder you prepare at home by soaking and boiling. Dashmool Ark is a distillate — a ready-to-drink liquid form. Both contain the same ten roots but in different preparations.' },
+      { q: 'Is Dashmool Kwath good for postpartum recovery?', a: 'Yes, Dashmool Kwath is a classical postpartum tonic. It helps restore strength and reduce Vata imbalance after childbirth. Consult your physician before use during breastfeeding.' },
+    ],
+    shopifyHandle: 'dashmool-kwath',
+    keywords: ['dashmool kwath', 'दशमूल क्वाथ', 'dashmoola kwath', 'dashmool decoction', 'arthritis ayurvedic kwath', 'postpartum ayurveda', 'ten roots ayurveda'],
   },
   {
     slug: 'pilolin',
