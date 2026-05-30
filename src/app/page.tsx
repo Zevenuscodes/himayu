@@ -200,7 +200,7 @@ export default async function HomePage() {
           <div className="relative">
             <h2 className="text-2xl sm:text-4xl font-bold mb-4">Start Your Path to Natural Healing</h2>
             <p className="text-white/80 max-w-md mx-auto mb-8">
-              GMP-certified Ayurvedic medicines delivered to your door. Free shipping on orders over ₹999.
+              GMP-certified Ayurvedic medicines delivered to your door.
             </p>
             <Link
               href="/products"

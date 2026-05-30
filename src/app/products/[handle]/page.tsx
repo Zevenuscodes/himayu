@@ -5,7 +5,7 @@ import { medicinePages } from '@/lib/medicinePages';
 import { notFound, redirect } from 'next/navigation';
 import Image from 'next/image';
 import ProductActions from '@/components/ProductActions';
-import { Leaf, Truck, RotateCcw, Shield, CheckCircle2, FlaskConical } from 'lucide-react';
+import { Leaf, RotateCcw, Shield, CheckCircle2, FlaskConical } from 'lucide-react';
 
 export const revalidate = 60;
 
@@ -75,7 +75,6 @@ export default async function ProductPage({ params }: Props) {
   const description = product.description || info?.description || '';
 
   const perks = [
-    { icon: Truck, label: 'Free shipping over ₹999' },
     { icon: RotateCcw, label: '30-day easy returns' },
     { icon: Shield, label: '100% authentic & GMP certified' },
   ];

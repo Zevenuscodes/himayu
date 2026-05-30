@@ -72,7 +72,7 @@ const faqs = [
       },
       {
         q: 'Is there free shipping?',
-        a: 'Yes! We offer free shipping on all orders above ₹999.',
+        a: 'Please contact us at himayucare@gmail.com or call 7817982004 for shipping information.',
       },
       {
         q: 'How do I track my order?',

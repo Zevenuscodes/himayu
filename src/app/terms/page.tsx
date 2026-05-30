@@ -56,7 +56,7 @@ export default function TermsPage() {
             <h2 className="text-lg font-semibold text-[#2c2c2c] mb-3">5. Shipping & Delivery</h2>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>We ship PAN India. Delivery typically takes 3–7 business days depending on your location.</li>
-              <li>Free shipping is available on orders above ₹999. Shipping charges for other orders are calculated based on order weight.</li>
+              <li>Shipping charges are calculated based on order weight and delivery location.</li>
               <li>We are not responsible for delays caused by courier partners, weather conditions or circumstances beyond our control.</li>
               <li>Customers are responsible for providing accurate delivery addresses. Re-delivery charges may apply for failed deliveries due to incorrect address.</li>
             </ul>
