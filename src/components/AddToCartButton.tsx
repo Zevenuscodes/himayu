@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { ShoppingBag, Check, Minus, Plus } from 'lucide-react';
+import { ShoppingBag, Check, Minus, Plus, ShoppingCart } from 'lucide-react';
 
 interface Props {
   variantId: string | undefined;
@@ -70,6 +71,14 @@ export default function AddToCartButton({ variantId, available }: Props) {
           <><ShoppingBag className="w-4 h-4" /> Add to Cart</>
         )}
       </button>
+
+      {/* View cart */}
+      <Link
+        href="/cart"
+        className="flex-1 py-4 rounded-full border-2 border-[#4a7c59] text-[#4a7c59] font-medium flex items-center justify-center gap-2 hover:bg-[#4a7c59]/5 transition-colors whitespace-nowrap"
+      >
+        <ShoppingCart className="w-4 h-4" /> View Cart
+      </Link>
     </div>
   );
 }
