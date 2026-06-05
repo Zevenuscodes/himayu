@@ -788,6 +788,45 @@ Formulated under GMP-certified conditions at Hans Herbals Pvt Ltd, Haridwar, Him
     keywords: ['neurojoint', 'himayu neurojoint care', 'joint pain ayurvedic medicine', 'arthritis capsule ayurveda', 'nerve weakness ayurveda', 'ashwagandha shallaki guggulu'],
     image: '/neurojoint.png',
   },
+  {
+    slug: 'ksheerbala-tail',
+    name: 'Ksheerbala Tail',
+    hindiName: 'क्षीरबला तेल',
+    tagline: 'Classical Ayurvedic Oil for Joint Pain, Arthritis & Nerve Weakness',
+    category: 'Ayurvedic Classical Oil',
+    form: 'Taila (Medicated Oil)',
+    netWeight: '50ml / 150ml / 450ml',
+    description: 'Classical Ayurvedic medicated oil (Ashtanga Hridayam) for joint pain, arthritis, nerve weakness, paralysis and postpartum recovery.',
+    longDescription: `Ksheerbala Tail (क्षीरबला तेल) is one of the most revered classical Ayurvedic medicated oils, referenced in Ashtanga Hridayam (Vatavyadhi Chikitsa Adhyaya) — the classical Ayurvedic text. The name itself reveals its composition: Ksheer (cow's milk) + Bala (Sida cordifolia) + Tail (oil). This trifecta of milk, herb and sesame oil creates a deeply nourishing, Vata-pacifying medicated oil.
+
+Prepared through the classical Taila Pakva (oil processing) method, sesame oil is slowly cooked with Bala (Sida cordifolia root) and cow's milk until the milk evaporates and the oil absorbs the therapeutic properties of the herb. This classical process ensures maximum bioavailability of the active constituents through the skin.
+
+Ksheerbala Tail is used both for daily Abhyanga (self-massage) and in Panchakarma therapies including Pizhichil (oil bath) and Basti (medicated enema base). It is Himayu Care's go-to external oil for all Vata-related conditions — joint pain, arthritis, nerve weakness, paralysis, postpartum recovery and general muscular strengthening.`,
+    benefits: [
+      'Joint pain and stiffness (Sandhivata)',
+      'Osteoarthritis and Rheumatoid Arthritis',
+      'Nerve weakness and neuropathy (Vata disorders)',
+      'Paralysis — partial and facial',
+      'Muscle weakness and fatigue',
+      'Postpartum recovery and body strengthening',
+      'Sciatica and lower back pain',
+      'Cervical spondylosis and frozen shoulder',
+    ],
+    ingredients: [
+      { name: 'Bala (Root)', latin: 'Sida cordifolia', quantity: 'Classical ratio' },
+      { name: 'Tila Taila (Sesame Oil)', latin: 'Sesamum indicum', quantity: 'Base oil' },
+      { name: 'Ksheera (Cow\'s Milk)', latin: 'Bos taurus', quantity: 'Classical ratio' },
+    ],
+    dosage: 'For massage (Abhyanga): Warm the oil slightly and massage into affected joints or the full body in gentle circular motions. Leave for 20–30 minutes before bathing with warm water. Use daily or as directed by your Ayurvedic physician. For Panchakarma use: as advised by your physician.',
+    faqs: [
+      { q: 'What is Ksheerbala Tail used for?', a: 'Ksheerbala Tail is used for joint pain, arthritis, nerve weakness, paralysis, muscle weakness and postpartum recovery. It is a classical Ayurvedic medicated oil for Vata disorders.' },
+      { q: 'How do I use Ksheerbala Tail?', a: 'Warm the oil slightly and massage into the affected area or full body. Leave for 20–30 minutes, then bathe with warm water. Daily use gives the best results for chronic conditions.' },
+      { q: 'Is Ksheerbala Tail good for arthritis?', a: 'Yes, Ksheerbala Tail is one of the classical Ayurvedic oils specifically indicated for arthritis (Sandhivata). Regular massage reduces pain, stiffness and improves joint mobility.' },
+      { q: 'Can Ksheerbala Tail be used during postpartum recovery?', a: 'Yes, Ksheerbala Tail is a classical postpartum tonic oil. It strengthens muscles, reduces Vata imbalance and supports recovery after childbirth.' },
+    ],
+    shopifyHandle: 'ksheerbala-tail',
+    keywords: ['ksheerbala tail', 'ksheerbala taila', 'क्षीरबला तेल', 'ksheerbala tel', 'kheerbala oil', 'joint pain oil ayurveda', 'arthritis oil ayurvedic', 'ayurvedic massage oil joints'],
+  },
 ];
 
 export function getMedicinePage(slug: string): MedicinePage | null {

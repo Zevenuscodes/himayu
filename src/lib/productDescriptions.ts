@@ -453,6 +453,31 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       category: 'Ayurvedic Proprietary Formulation',
     },
   },
+  {
+    keywords: ['ksheerbala tail', 'ksheerbala taila', 'ksheerbala tel', 'kheerbala', 'क्षीरबला तेल', 'ksheerbala'],
+    info: {
+      short: 'Classical Ayurvedic oil for joint pain, arthritis, nerve weakness & paralysis.',
+      description:
+        'Ksheerbala Tail (क्षीरबला तेल) is a classical Ayurvedic medicated oil referenced in Ashtanga Hridayam (Vatavyadhi Chikitsa). Prepared by processing sesame oil with Bala (Sida cordifolia) and cow\'s milk, it is one of the most revered Vata-pacifying oils in the classical pharmacopoeia. Used for massage (Abhyanga) and Panchakarma therapies. Highly effective for joint pain, arthritis, nerve weakness and postpartum recovery.',
+      benefits: [
+        'Joint pain and stiffness (Sandhivata)',
+        'Arthritis — Osteoarthritis and Rheumatoid',
+        'Nerve weakness and neuropathy',
+        'Paralysis and Vata disorders',
+        'Muscle weakness and fatigue',
+        'Postpartum recovery and strengthening',
+        'Sciatica and back pain',
+      ],
+      ingredients: [
+        { name: 'Bala (Root)', latin: 'Sida cordifolia', quantity: 'Classical ratio' },
+        { name: 'Tila Taila (Sesame Oil)', latin: 'Sesamum indicum', quantity: 'Base oil' },
+        { name: 'Ksheera (Cow\'s Milk)', latin: 'Bos taurus', quantity: 'Classical ratio' },
+      ],
+      form: 'Taila (Medicated Oil)',
+      netWeight: '50ml / 150ml / 450ml',
+      category: 'Ayurvedic Classical Oil',
+    },
+  },
 ];
 
 export function getProductInfo(title: string): ProductInfo | null {
