@@ -151,12 +151,6 @@ export default async function ProductPage({ params }: Props) {
 
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#2c2c2c] leading-tight">{product.title}</h1>
 
-            <div className="mt-3 sm:mt-4 flex items-center gap-3 flex-wrap">
-              <span className="inline-block bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">10% OFF</span>
-              <span className="text-xl sm:text-2xl font-bold text-[#2c2c2c]">{currency} {price.toFixed(2)}</span>
-              <span className="text-base text-[#aaa] line-through">{currency} {originalPrice.toFixed(2)}</span>
-            </div>
-
             {description && (
               <div className="mt-5 space-y-3">
                 {description.split('\n\n').map((para, i) => (

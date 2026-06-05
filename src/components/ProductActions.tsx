@@ -33,8 +33,20 @@ export default function ProductActions({ variants, options }: Props) {
     v.selectedOptions.every((so) => selected[so.name] === so.value)
   ) ?? variants[0];
 
+  const originalPrice = parseFloat(matchedVariant?.price?.amount ?? '0');
+  const discountedPrice = originalPrice * 0.9;
+  const currency = matchedVariant?.price?.currencyCode ?? 'INR';
+
   return (
     <div className="space-y-5">
+
+      {/* Dynamic price — updates with variant selection */}
+      <div className="flex items-center gap-3 flex-wrap">
+        <span className="inline-block bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">10% OFF</span>
+        <span className="text-xl sm:text-2xl font-bold text-[#2c2c2c]">{currency} {discountedPrice.toFixed(2)}</span>
+        <span className="text-base text-[#aaa] line-through">{currency} {originalPrice.toFixed(2)}</span>
+      </div>
+
       {filteredOptions.map((option) => (
         <div key={option.name}>
           <p className="text-sm font-semibold text-[#2c2c2c] mb-2">{option.name}</p>
