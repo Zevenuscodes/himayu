@@ -69,8 +69,7 @@ export default async function ProductPage({ params }: Props) {
 
   const images = product.images.edges.map((e) => e.node);
   const variants = product.variants.edges.map((e) => e.node);
-  const originalPrice = parseFloat(product.priceRange.minVariantPrice.amount);
-  const price = originalPrice * 0.9;
+  const price = parseFloat(product.priceRange.minVariantPrice.amount);
   const currency = product.priceRange.minVariantPrice.currencyCode;
   const info = getProductInfo(product.title);
   const description = product.description || info?.description || '';
