@@ -716,8 +716,8 @@ Gojihwadi Kwath is also beneficial for fever and liver disorders, making it a ve
     name: 'Himayu Pilolin Kit',
     tagline: 'Complete 3-in-1 Ayurvedic Solution for Piles (Haemorrhoids)',
     category: 'Ayurvedic Proprietary Formulation',
-    form: 'Kit (Capsule + Oil + Powder)',
-    netWeight: '60 Caps + 100ml Oil + 100g Powder',
+    form: 'Kit (3-in-1)',
+    netWeight: '3-in-1 Kit',
     description: 'Complete Ayurvedic kit for piles — capsule, oil and powder working together for lasting relief.',
     longDescription: `Himayu Pilolin Kit is a comprehensive 3-in-1 Ayurvedic solution for haemorrhoids (piles), designed to provide complete relief through a multi-pronged approach. Unlike single-medicine treatments, the Pilolin Kit addresses piles both internally and externally — tackling the root cause while providing immediate symptomatic relief.
 
@@ -795,7 +795,7 @@ Formulated under GMP-certified conditions at Hans Herbals Pvt Ltd, Haridwar, Him
     tagline: 'Classical Ayurvedic Oil for Joint Pain, Arthritis & Nerve Weakness',
     category: 'Ayurvedic Classical Oil',
     form: 'Taila (Medicated Oil)',
-    netWeight: '50ml / 150ml / 450ml',
+    netWeight: '50ml / 450ml',
     description: 'Classical Ayurvedic medicated oil (Ashtanga Hridayam) for joint pain, arthritis, nerve weakness, paralysis and postpartum recovery.',
     longDescription: `Ksheerbala Tail (क्षीरबला तेल) is one of the most revered classical Ayurvedic medicated oils, referenced in Ashtanga Hridayam (Vatavyadhi Chikitsa Adhyaya) — the classical Ayurvedic text. The name itself reveals its composition: Ksheer (cow's milk) + Bala (Sida cordifolia) + Tail (oil). This trifecta of milk, herb and sesame oil creates a deeply nourishing, Vata-pacifying medicated oil.
 
