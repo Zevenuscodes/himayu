@@ -33,8 +33,8 @@ export default function ProductActions({ variants, options }: Props) {
     v.selectedOptions.every((so) => selected[so.name] === so.value)
   ) ?? variants[0];
 
-  const salePrice = parseFloat(matchedVariant?.price?.amount ?? '0');
-  const mrpPrice = salePrice / 0.9;
+  const mrpPrice = parseFloat(matchedVariant?.price?.amount ?? '0');
+  const salePrice = mrpPrice * 0.9;
   const currency = matchedVariant?.price?.currencyCode ?? 'INR';
 
   return (
@@ -44,7 +44,7 @@ export default function ProductActions({ variants, options }: Props) {
       <div className="flex items-center gap-3 flex-wrap">
         <span className="inline-block bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">10% OFF</span>
         <span className="text-xl sm:text-2xl font-bold text-[#2c2c2c]">{currency} {salePrice.toFixed(2)}</span>
-        <span className="text-base text-[#aaa] line-through">{currency} {mrpPrice.toFixed(0)}</span>
+        <span className="text-base text-[#aaa] line-through">{currency} {mrpPrice.toFixed(2)}</span>
       </div>
 
       {filteredOptions.map((option) => (

@@ -9,8 +9,8 @@ function normalizeTitle(title: string) {
 
 export default function ProductCard({ product }: { product: ShopifyProduct }) {
   const image = product.images.edges[0]?.node;
-  const salePrice = parseFloat(product.priceRange.minVariantPrice.amount);
-  const mrpPrice = salePrice / 0.9;
+  const mrpPrice = parseFloat(product.priceRange.minVariantPrice.amount);
+  const salePrice = mrpPrice * 0.9;
   const currency = product.priceRange.minVariantPrice.currencyCode;
   const info = getProductInfo(product.title);
   const shortDesc = product.description || info?.short || '';
@@ -66,7 +66,7 @@ export default function ProductCard({ product }: { product: ShopifyProduct }) {
               {currency} {salePrice.toFixed(2)}
             </p>
             <p className="text-[#aaa] text-xs line-through">
-              {currency} {mrpPrice.toFixed(0)}
+              {currency} {mrpPrice.toFixed(2)}
             </p>
           </div>
           {info?.netWeight && (
