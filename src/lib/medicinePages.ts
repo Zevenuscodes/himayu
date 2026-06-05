@@ -827,6 +827,49 @@ Ksheerbala Tail is used both for daily Abhyanga (self-massage) and in Panchakarm
     shopifyHandle: 'ksheerbala-tail',
     keywords: ['ksheerbala tail', 'ksheerbala taila', 'क्षीरबला तेल', 'ksheerbala tel', 'kheerbala oil', 'joint pain oil ayurveda', 'arthritis oil ayurvedic', 'ayurvedic massage oil joints'],
   },
+  {
+    slug: 'saindhavadi-tail',
+    name: 'Saindhavadi Tail',
+    hindiName: 'सेन्धवादि तेल',
+    tagline: 'Classical Ayurvedic Oil for Joint Pain, Arthritis & Back Pain',
+    category: 'Ayurvedic Classical Oil',
+    form: 'Taila (Medicated Oil)',
+    netWeight: '450ml',
+    description: 'Classical Ayurvedic medicated oil (Ashtanga Hridayam) with Saindhava Lavana (rock salt) for joint pain, arthritis, sciatica and spinal conditions.',
+    longDescription: `Saindhavadi Tail (सेन्धवादि तेल) is a time-honoured classical Ayurvedic medicated oil referenced in Ashtanga Hridayam, prepared with Saindhava Lavana (rock salt) as the primary therapeutic agent in a base of sesame oil with classical Vata-pacifying herbs. The name derives from its principal ingredient — Saindhava (Sindh rock salt), which in Ayurveda is considered the finest of all salts, specifically beneficial for Vata disorders.
+
+This classical formulation penetrates deep into the joints and muscles, dissolving accumulated toxins (Ama), reducing inflammation and restoring proper circulation of Vata (the energy governing movement and sensation). It is highly effective for all types of joint and musculoskeletal conditions including arthritis, back pain, sciatica and cervical spondylosis.
+
+Himayu Care's Saindhavadi Tail is prepared following authentic classical proportions, using pure Saindhava Lavana, cold-pressed sesame oil and classical herbs to ensure the highest therapeutic potency.`,
+    benefits: [
+      'Joint pain and stiffness (Sandhivata)',
+      'Osteoarthritis and Rheumatoid Arthritis',
+      'Back pain and lumbar spondylosis',
+      'Sciatica and nerve pain (Gridhrasi)',
+      'Cervical spondylosis and frozen shoulder',
+      'Muscle spasms and stiffness',
+      'Arthritis-related swelling and inflammation',
+      'General body pain and fatigue',
+    ],
+    ingredients: [
+      { name: 'Saindhava Lavana (Rock Salt)', latin: 'Sodium chloride naturale', quantity: 'Classical ratio' },
+      { name: 'Tila Taila (Sesame Oil)', latin: 'Sesamum indicum', quantity: 'Base oil' },
+      { name: 'Devadaru', latin: 'Cedrus deodara', quantity: 'Classical ratio' },
+      { name: 'Rasna', latin: 'Pluchea lanceolata', quantity: 'Classical ratio' },
+      { name: 'Bala', latin: 'Sida cordifolia', quantity: 'Classical ratio' },
+      { name: 'Madhuka (Mulethi)', latin: 'Glycyrrhiza glabra', quantity: 'Classical ratio' },
+    ],
+    dosage: 'For massage (Abhyanga): Warm the oil slightly and massage into affected joints or painful areas in gentle circular motions. Leave for 20–30 minutes before bathing with warm water. For best results, use daily or as directed by your Ayurvedic physician. For Panchakarma: as advised by your physician.',
+    faqs: [
+      { q: 'What is Saindhavadi Tail used for?', a: 'Saindhavadi Tail is a classical Ayurvedic medicated oil used for joint pain, arthritis, back pain, sciatica, cervical spondylosis and muscle stiffness. It pacifies Vata dosha and relieves pain and inflammation.' },
+      { q: 'How do I use Saindhavadi Tail?', a: 'Warm the oil slightly and massage into the affected area with gentle circular motions. Leave for 20–30 minutes, then bathe with warm water. Use daily for chronic conditions or as directed by your physician.' },
+      { q: 'What makes Saindhavadi Tail different from other joint oils?', a: 'The key ingredient Saindhava Lavana (rock salt) is unique — in Ayurveda, it is considered the finest salt for Vata disorders. Combined with sesame oil and classical herbs, it penetrates deeply to dissolve Ama (toxins) and restore joint health.' },
+      { q: 'Is Saindhavadi Tail good for sciatica?', a: 'Yes, Saindhavadi Tail is specifically indicated for Gridhrasi (sciatica) in Ayurvedic texts. Regular massage along the lower back and sciatic nerve pathway relieves pain and nerve inflammation.' },
+      { q: 'Can Saindhavadi Tail be used for cervical spondylosis?', a: 'Yes, regular massage of the neck and shoulders with Saindhavadi Tail is highly beneficial for cervical spondylosis, reducing stiffness and nerve compression symptoms.' },
+    ],
+    shopifyHandle: 'saindhavadi-tail',
+    keywords: ['saindhavadi tail', 'saindhavadi taila', 'सेन्धवादि तेल', 'saindhavadi tel', 'saindhava oil', 'joint pain oil', 'arthritis oil ayurvedic', 'back pain oil ayurveda', 'sciatica oil'],
+  },
 ];
 
 export function getMedicinePage(slug: string): MedicinePage | null {

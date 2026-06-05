@@ -454,6 +454,33 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
     },
   },
   {
+    keywords: ['saindhavadi tail', 'saindhavadi taila', 'saindhavadi tel', 'सेन्धवादि तेल', 'saindhavadi'],
+    info: {
+      short: 'Classical Ayurvedic oil for joint pain, arthritis, back pain & muscle stiffness.',
+      description:
+        'Saindhavadi Tail (सेन्धवादि तेल) is a classical Ayurvedic medicated oil referenced in Ashtanga Hridayam, prepared with Saindhava Lavana (rock salt) as the primary therapeutic agent combined with sesame oil and classical herbs. It is highly effective for all types of joint pain, arthritis, backache, sciatica and muscle stiffness. Used for external massage (Abhyanga). Available in 450ml.',
+      benefits: [
+        'Joint pain and stiffness (Sandhivata)',
+        'Osteoarthritis and Rheumatoid Arthritis',
+        'Back pain and lumbar spondylosis',
+        'Sciatica and nerve pain',
+        'Muscle stiffness and spasms',
+        'Cervical spondylosis and frozen shoulder',
+      ],
+      ingredients: [
+        { name: 'Saindhava Lavana (Rock Salt)', latin: 'Sodium chloride naturale', quantity: 'Classical ratio' },
+        { name: 'Tila Taila (Sesame Oil)', latin: 'Sesamum indicum', quantity: 'Base oil' },
+        { name: 'Devadaru', latin: 'Cedrus deodara', quantity: 'Classical ratio' },
+        { name: 'Rasna', latin: 'Pluchea lanceolata', quantity: 'Classical ratio' },
+        { name: 'Bala', latin: 'Sida cordifolia', quantity: 'Classical ratio' },
+        { name: 'Madhuka (Mulethi)', latin: 'Glycyrrhiza glabra', quantity: 'Classical ratio' },
+      ],
+      form: 'Taila (Medicated Oil)',
+      netWeight: '450ml',
+      category: 'Ayurvedic Classical Oil',
+    },
+  },
+  {
     keywords: ['ksheerbala tail', 'ksheerbala taila', 'ksheerbala tel', 'kheerbala', 'क्षीरबला तेल', 'ksheerbala'],
     info: {
       short: 'Classical Ayurvedic oil for joint pain, arthritis, nerve weakness & paralysis.',
