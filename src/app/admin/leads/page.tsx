@@ -1,5 +1,6 @@
 import { getSupabaseAdmin } from '@/lib/supabaseServer';
 import LeadStatusSelect from '@/components/LeadStatusSelect';
+import AdminNav from '@/components/AdminNav';
 import { Phone, Users } from 'lucide-react';
 
 interface Lead {
@@ -49,13 +50,10 @@ export default async function AdminLeadsPage() {
             </h1>
             <p className="text-sm text-[#888] mt-0.5">{newCount} new lead{newCount !== 1 ? 's' : ''} to call</p>
           </div>
-          <a
-            href="/admin/login"
-            className="text-xs text-[#aaa] hover:text-[#4a7c59] transition-colors"
-          >
-            Logout
-          </a>
+          <a href="/admin/login" className="text-xs text-[#aaa] hover:text-[#4a7c59] transition-colors">Logout</a>
         </div>
+
+        <AdminNav active="leads" />
 
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-600 rounded-xl px-4 py-3 text-sm mb-6">
