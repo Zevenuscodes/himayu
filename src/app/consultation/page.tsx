@@ -101,7 +101,7 @@ export default function ConsultationPage() {
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold mb-3">Consultation Enquiry</h1>
           <p className="text-white/80 text-base sm:text-lg max-w-xl mx-auto">
-            Speak with our Ayurvedic expert. Get personalised medicine advice based on your health concern — completely free.
+            Speak with our Ayurvedic expert. Get personalised medicine advice based on your health concern.
           </p>
         </div>
       </section>
@@ -110,7 +110,7 @@ export default function ConsultationPage() {
       <section className="py-10 px-4 border-b border-[#e8e0d0]">
         <div className="max-w-3xl mx-auto grid sm:grid-cols-3 gap-6 text-center">
           {[
-            { icon: Phone, title: 'Free Callback', desc: 'We call you — no charge, no commitment.' },
+            { icon: Phone, title: 'Callback', desc: 'We call you at your preferred time.' },
             { icon: Heart, title: 'Personalised Advice', desc: 'Expert guidance based on your condition.' },
             { icon: Leaf, title: '100% Ayurvedic', desc: 'Natural, GMP-certified medicines only.' },
           ].map(({ icon: Icon, title, desc }) => (
