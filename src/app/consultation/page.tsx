@@ -96,10 +96,10 @@ export default function ConsultationPage() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex justify-center mb-4">
             <span className="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-medium px-4 py-1.5 rounded-full">
-              <Leaf className="w-3.5 h-3.5" /> Free Consultation
+              <Leaf className="w-3.5 h-3.5" /> Consultation Enquiry
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3">Book an Ayurvedic Consultation</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-3">Consultation Enquiry</h1>
           <p className="text-white/80 text-base sm:text-lg max-w-xl mx-auto">
             Speak with our Ayurvedic expert. Get personalised medicine advice based on your health concern — completely free.
           </p>
@@ -257,7 +257,7 @@ export default function ConsultationPage() {
               disabled={loading}
               className="w-full bg-[#4a7c59] text-white py-4 rounded-full font-semibold text-sm hover:bg-[#3a6347] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {loading ? 'Submitting...' : 'Request Free Consultation'}
+              {loading ? 'Submitting...' : 'Submit Enquiry'}
             </button>
 
             <p className="text-center text-xs text-[#aaa]">
