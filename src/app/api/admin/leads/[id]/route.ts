@@ -4,7 +4,7 @@ import { verifySessionToken } from '@/lib/adminAuth';
 
 export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const token = req.cookies.get('admin_auth')?.value ?? '';
-  if (!verifySessionToken(token)) {
+  if (!await verifySessionToken(token)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 

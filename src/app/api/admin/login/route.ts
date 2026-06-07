@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { timingSafeEqual } from 'crypto';
 import { generateSessionToken } from '@/lib/adminAuth';
 
 export async function POST(req: NextRequest) {
@@ -10,15 +9,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Server misconfigured.' }, { status: 500 });
   }
 
-  const isCorrect =
-    password?.length === adminPassword.length &&
-    timingSafeEqual(Buffer.from(password), Buffer.from(adminPassword));
-
-  if (!isCorrect) {
+  if (!password || password !== adminPassword) {
     return NextResponse.json({ error: 'Wrong password.' }, { status: 401 });
   }
 
-  const token = generateSessionToken();
+  const token = await generateSessionToken();
   const res = NextResponse.json({ success: true });
   res.cookies.set('admin_auth', token, {
     httpOnly: true,
