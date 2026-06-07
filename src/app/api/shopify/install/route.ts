@@ -6,7 +6,7 @@ export async function GET() {
   const redirectUri = process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000/api/shopify/callback'
     : 'https://himayucare.com/api/shopify/callback';
-  const scopes = 'read_orders,read_customers,write_fulfillments';
+  const scopes = 'read_orders,read_customers,write_fulfillments,read_merchant_managed_fulfillment_orders,write_merchant_managed_fulfillment_orders';
 
   const installUrl =
     `https://${shop}/admin/oauth/authorize` +
