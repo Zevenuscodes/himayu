@@ -14,21 +14,15 @@ export default function AdminLoginPage() {
     e.preventDefault();
     setLoading(true);
     setError('');
-    try {
-      const res = await fetch('/api/admin/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password }),
-      });
-      if (res.ok) {
-        router.push('/admin/leads');
-      } else {
-        const data = await res.json().catch(() => ({}));
-        setError(data.error ?? 'Wrong password. Try again.');
-        setLoading(false);
-      }
-    } catch {
-      setError('Network error. Please try again.');
+    const res = await fetch('/api/admin/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password }),
+    });
+    if (res.ok) {
+      router.push('/admin/leads');
+    } else {
+      setError('Wrong password. Try again.');
       setLoading(false);
     }
   }
