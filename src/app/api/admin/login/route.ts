@@ -9,23 +9,25 @@ const WINDOW_MINUTES = 15;
 export async function POST(req: NextRequest) {
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
 
-  // Rate limit check
+  // Rate limit check (with timeout so a slow DB never stalls login)
   try {
+    const timeout = new Promise<null>((_, reject) => setTimeout(() => reject(new Error('timeout')), 3000));
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const { count } = await (getSupabaseAdmin() as any)
+    const query = (getSupabaseAdmin() as any)
       .from('login_attempts')
       .select('*', { count: 'exact', head: true })
       .eq('ip', ip)
       .eq('success', false)
       .gte('created_at', new Date(Date.now() - WINDOW_MINUTES * 60 * 1000).toISOString());
 
-    if ((count ?? 0) >= MAX_ATTEMPTS) {
+    const result = await Promise.race([query, timeout]) as { count: number } | null;
+    if (result && (result.count ?? 0) >= MAX_ATTEMPTS) {
       return NextResponse.json(
         { error: `Too many failed attempts. Try again in ${WINDOW_MINUTES} minutes.` },
         { status: 429 }
       );
     }
-  } catch { /* if rate limit check fails, allow login */ }
+  } catch { /* if rate limit check fails or times out, allow login */ }
 
   const { password } = await req.json();
 
@@ -34,10 +36,10 @@ export async function POST(req: NextRequest) {
     password?.length === adminPassword.length &&
     timingSafeEqual(Buffer.from(password), Buffer.from(adminPassword));
 
-  // Log attempt
+  // Log attempt (fire and forget — don't await so it never stalls the response)
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await (getSupabaseAdmin() as any).from('login_attempts').insert([{ ip, success: isCorrect }]);
+    (getSupabaseAdmin() as any).from('login_attempts').insert([{ ip, success: isCorrect }]);
   } catch { /* non-critical */ }
 
   if (!isCorrect) {
