@@ -1,6 +1,7 @@
 import { getSupabaseAdmin } from '@/lib/supabaseServer';
 import { getOrders, ShopifyOrder } from '@/lib/shopifyAdmin';
 import AdminNav from '@/components/AdminNav';
+import FulfillButton from '@/components/FulfillButton';
 import { ShoppingBag, Phone, Link2 } from 'lucide-react';
 
 const paymentBadge: Record<string, string> = {
@@ -126,6 +127,9 @@ export default async function AdminOrdersPage() {
                     <p>{order.shipping_address.city}, {order.shipping_address.province} {order.shipping_address.zip}</p>
                   </div>
                 )}
+                {(!order.fulfillment_status || order.fulfillment_status === 'unfulfilled') && (
+                  <FulfillButton orderId={order.id} />
+                )}
               </div>
             );
           })}
@@ -137,7 +141,7 @@ export default async function AdminOrdersPage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-[#e8e0d0] bg-[#faf8f3]">
-                  {['Order', 'Date', 'Customer', 'Phone', 'Items', 'Shipping Address', 'Payment', 'Fulfillment', 'Total'].map((h) => (
+                  {['Order', 'Date', 'Customer', 'Phone', 'Items', 'Shipping Address', 'Payment', 'Fulfillment', 'Total', 'Action'].map((h) => (
                     <th key={h} className="text-left px-4 py-3 text-xs font-semibold text-[#888] uppercase tracking-wider">{h}</th>
                   ))}
                 </tr>
@@ -189,6 +193,11 @@ export default async function AdminOrdersPage() {
                       </td>
                       <td className="px-4 py-3 font-bold text-[#2c2c2c] whitespace-nowrap">
                         ₹{parseFloat(order.total_price).toFixed(2)}
+                      </td>
+                      <td className="px-4 py-3">
+                        {(!order.fulfillment_status || order.fulfillment_status === 'unfulfilled') && (
+                          <FulfillButton orderId={order.id} />
+                        )}
                       </td>
                     </tr>
                   );
