@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabaseServer';
+import { verifySessionToken } from '@/lib/adminAuth';
 
 export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  const auth = req.cookies.get('admin_auth');
-  if (!auth || auth.value !== process.env.ADMIN_PASSWORD) {
+  const token = req.cookies.get('admin_auth')?.value ?? '';
+  if (!verifySessionToken(token)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
