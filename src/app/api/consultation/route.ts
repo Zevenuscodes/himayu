@@ -1,6 +1,49 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabaseServer';
 
+const OMNIDIM_AGENT_ID = 180043;
+
+async function triggerOmnidimCall(lead: {
+  name: string;
+  phone: string;
+  age: string | null;
+  concern: string | null;
+  city: string | null;
+  preferred_time: string | null;
+}) {
+  const apiKey = process.env.OMNIDIM_API_KEY;
+  const phoneNumberId = process.env.OMNIDIM_PHONE_NUMBER_ID;
+
+  if (!apiKey) return; // silently skip if not configured
+
+  const toNumber = `+91${lead.phone}`;
+
+  const body: Record<string, unknown> = {
+    agent_id: OMNIDIM_AGENT_ID,
+    to_number: toNumber,
+    call_context: {
+      user_name: lead.name,
+      age: lead.age ?? 'not provided',
+      main_health_concern: lead.concern ?? 'general consultation',
+      city: lead.city ?? 'not provided',
+      preferred_callback_time: lead.preferred_time ?? 'not provided',
+    },
+  };
+
+  if (phoneNumberId) {
+    body.from_number_id = parseInt(phoneNumberId);
+  }
+
+  await fetch('https://api.omnidim.io/api/v1/call/dispatch/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Api-Key ${apiKey}`,
+    },
+    body: JSON.stringify(body),
+  });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -30,6 +73,16 @@ export async function POST(req: NextRequest) {
     ]);
 
     if (error) throw error;
+
+    // Trigger Omnidim voice call — fire and forget, never block the response
+    triggerOmnidimCall({
+      name: name.trim(),
+      phone: phoneDigits,
+      age: age?.trim() || null,
+      concern: concern?.trim() || null,
+      city: city?.trim() || null,
+      preferred_time: preferred_time || null,
+    }).catch(() => {});
 
     return NextResponse.json({ success: true });
   } catch (err) {
