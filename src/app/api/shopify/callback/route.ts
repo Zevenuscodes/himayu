@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
   }
 
   // Exchange code for permanent access token
-  const tokenRes = await fetch(`https://${shop}/admin/oauth/access_token`, {
+  const tokenRes = await fetch(`https://${shop}/admin/oauth/access_token`, { cache: 'no-store',
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
