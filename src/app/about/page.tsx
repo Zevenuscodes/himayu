@@ -132,7 +132,7 @@ export default function AboutPage() {
               <span className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-4">
                 <MapPin className="w-3.5 h-3.5" /> Manufacturing Unit
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-3">Hans Herbals Pvt Ltd</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3">Our Manufacturing Unit</h2>
               <p className="text-white/60 text-sm leading-relaxed">
                 Plot No. 59, 60, 61, Sector-8A<br />
                 SIDCUL, Haridwar — 248001 (UK)<br />
