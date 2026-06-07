@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Leaf, BadgeCheck, FlaskConical, Shield, Heart, MapPin, Award } from 'lucide-react';
+import { Leaf, BadgeCheck, FlaskConical, Shield, Heart, Award } from 'lucide-react';
 import AboutVisual from '@/components/AboutVisual';
 
 export const metadata: Metadata = {
@@ -125,41 +125,6 @@ export default function AboutPage() {
       </section>
 
       {/* Manufacturing credentials */}
-      <section id="manufacturing" className="bg-[#2c2c2c] text-white py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 gap-8 items-center">
-            <div>
-              <span className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-4">
-                <MapPin className="w-3.5 h-3.5" /> Manufacturing Unit
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-3">Our Manufacturing Unit</h2>
-              <p className="text-white/60 text-sm leading-relaxed">
-                Plot No. 59, 60, 61, Sector-8A<br />
-                SIDCUL, Haridwar — 248001 (UK)<br />
-                Mfg. Licence No. UK.AY-362/2017
-              </p>
-              <p className="mt-4 text-white/50 text-xs leading-relaxed max-w-sm">
-                Located in Uttarakhand's premier pharmaceutical manufacturing zone,
-                our facility follows strict GMP guidelines under the Drugs & Cosmetics Act.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { label: 'GMP Certified', sub: 'Drugs & Cosmetics Act' },
-                { label: 'Lic. UK.AY-362/2017', sub: 'Ayurvedic Authority, UK' },
-                { label: 'SIDCUL Facility', sub: 'Haridwar, Uttarakhand' },
-                { label: '100% Ayurvedic', sub: 'No synthetic additives' },
-              ].map(({ label, sub }) => (
-                <div key={label} className="bg-white/5 rounded-2xl p-4 border border-white/10">
-                  <p className="text-sm font-semibold text-white">{label}</p>
-                  <p className="text-xs text-white/40 mt-1">{sub}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#2c2c2c] mb-3">Ready to Begin Your Journey?</h2>
