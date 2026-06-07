@@ -483,7 +483,7 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
     },
   },
   {
-    keywords: ['ksheerbala tail', 'ksheerbala taila', 'ksheerbala tel', 'kheerbala', 'क्षीरबला तेल', 'ksheerbala'],
+    keywords: ['ksheerbala tail', 'ksheerbala taila', 'kheerbala', 'क्षीरबला तेल', 'ksheerbala'],
     info: {
       short: 'Classical Ayurvedic oil for joint pain, arthritis, nerve weakness & paralysis.',
       description:

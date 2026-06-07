@@ -827,7 +827,7 @@ Ksheerbala Tail is used both for daily Abhyanga (self-massage) and in Panchakarm
       { q: 'Can Ksheerbala Tail be used during postpartum recovery?', a: 'Yes, Ksheerbala Tail is a classical postpartum tonic oil. It strengthens muscles, reduces Vata imbalance and supports recovery after childbirth.' },
     ],
     shopifyHandle: 'ksheerbala-tail',
-    keywords: ['ksheerbala tail', 'ksheerbala taila', 'क्षीरबला तेल', 'ksheerbala tel', 'kheerbala oil', 'joint pain oil ayurveda', 'arthritis oil ayurvedic', 'ayurvedic massage oil joints'],
+    keywords: ['ksheerbala tail', 'ksheerbala taila', 'क्षीरबला तेल', 'kheerbala oil', 'joint pain oil ayurveda', 'arthritis oil ayurvedic', 'ayurvedic massage oil joints'],
   },
   {
     slug: 'saindhavadi-tail',
