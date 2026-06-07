@@ -1,5 +1,4 @@
 const SHOPIFY_STORE = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN!;
-const SHOPIFY_ADMIN_TOKEN = process.env.SHOPIFY_ADMIN_ACCESS_TOKEN!;
 const API_VERSION = '2024-01';
 
 export interface ShopifyOrder {
@@ -21,7 +20,6 @@ export interface ShopifyOrder {
     address1: string;
     city: string;
     province: string;
-    zip: string;
     phone: string | null;
   } | null;
   line_items: {
@@ -33,19 +31,19 @@ export interface ShopifyOrder {
   }[];
 }
 
-export async function getOrders(limit = 50, status = 'any'): Promise<ShopifyOrder[]> {
+export async function getOrders(token: string, limit = 100): Promise<ShopifyOrder[]> {
   const res = await fetch(
-    `https://${SHOPIFY_STORE}/admin/api/${API_VERSION}/orders.json?status=${status}&limit=${limit}&order=created_at+desc`,
+    `https://${SHOPIFY_STORE}/admin/api/${API_VERSION}/orders.json?status=any&limit=${limit}&order=created_at+desc`,
     {
       headers: {
-        'X-Shopify-Access-Token': SHOPIFY_ADMIN_TOKEN,
+        'X-Shopify-Access-Token': token,
         'Content-Type': 'application/json',
       },
       next: { revalidate: 30 },
     }
   );
 
-  if (!res.ok) throw new Error(`Shopify Admin API error: ${res.status}`);
+  if (!res.ok) throw new Error(`Shopify API error ${res.status}: ${await res.text()}`);
   const data = await res.json();
-  return data.orders;
+  return data.orders ?? [];
 }
