@@ -31,13 +31,21 @@ const statusLabels: Record<string, string> = {
 };
 
 export default async function AdminLeadsPage() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { data: leads, error } = await (getSupabaseAdmin() as any)
-    .from('consultations')
-    .select('*')
-    .order('created_at', { ascending: false });
+  let leads: Lead[] = [];
+  let error = '';
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { data, error: dbError } = await (getSupabaseAdmin() as any)
+      .from('consultations')
+      .select('*')
+      .order('created_at', { ascending: false });
+    if (dbError) error = dbError.message;
+    else leads = data ?? [];
+  } catch (e) {
+    error = (e as Error).message;
+  }
 
-  const newCount = leads?.filter((l: Lead) => l.status === 'new').length ?? 0;
+  const newCount = leads.filter((l: Lead) => l.status === 'new').length;
 
   return (
     <main className="min-h-screen bg-[#faf8f3] pt-6 pb-16 px-4">
