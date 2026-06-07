@@ -42,12 +42,18 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   }
 
   const foData = await foRes.json();
-  const openFOs = (foData.fulfillment_orders ?? []).filter(
-    (fo: { status: string }) => fo.status === 'open'
+  const allFOs = foData.fulfillment_orders ?? [];
+  const fulfillableStatuses = ['open', 'in_progress', 'scheduled', 'on_hold'];
+  const openFOs = allFOs.filter(
+    (fo: { status: string }) => fulfillableStatuses.includes(fo.status)
   );
 
   if (openFOs.length === 0) {
-    return NextResponse.json({ error: 'Order is already fulfilled' }, { status: 400 });
+    const statuses = allFOs.map((fo: { status: string }) => fo.status).join(', ');
+    return NextResponse.json(
+      { error: `No fulfillable orders found. Statuses: ${statuses || 'none'}` },
+      { status: 400 }
+    );
   }
 
   // Create fulfillment
