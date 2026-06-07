@@ -121,7 +121,10 @@ export default async function AdminOrdersPage() {
                   </a>
                 )}
                 {order.shipping_address && (
-                  <p className="text-xs text-[#888]">{order.shipping_address.city}, {order.shipping_address.province}</p>
+                  <div className="text-xs text-[#888] leading-relaxed">
+                    <p>{order.shipping_address.address1}{order.shipping_address.address2 ? `, ${order.shipping_address.address2}` : ''}</p>
+                    <p>{order.shipping_address.city}, {order.shipping_address.province} {order.shipping_address.zip}</p>
+                  </div>
                 )}
               </div>
             );
@@ -134,7 +137,7 @@ export default async function AdminOrdersPage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-[#e8e0d0] bg-[#faf8f3]">
-                  {['Order', 'Date', 'Customer', 'Phone', 'Items', 'City', 'Payment', 'Fulfillment', 'Total'].map((h) => (
+                  {['Order', 'Date', 'Customer', 'Phone', 'Items', 'Shipping Address', 'Payment', 'Fulfillment', 'Total'].map((h) => (
                     <th key={h} className="text-left px-4 py-3 text-xs font-semibold text-[#888] uppercase tracking-wider">{h}</th>
                   ))}
                 </tr>
@@ -166,7 +169,14 @@ export default async function AdminOrdersPage() {
                           <p key={item.id} className="truncate">{item.title}{item.variant_title ? ` (${item.variant_title})` : ''} × {item.quantity}</p>
                         ))}
                       </td>
-                      <td className="px-4 py-3 text-[#666] whitespace-nowrap">{order.shipping_address?.city ?? '—'}</td>
+                      <td className="px-4 py-3 text-[#666] text-xs">
+                        {order.shipping_address ? (
+                          <>
+                            <p>{order.shipping_address.address1}{order.shipping_address.address2 ? `, ${order.shipping_address.address2}` : ''}</p>
+                            <p>{order.shipping_address.city}, {order.shipping_address.province} {order.shipping_address.zip}</p>
+                          </>
+                        ) : '—'}
+                      </td>
                       <td className="px-4 py-3">
                         <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${paymentBadge[order.financial_status] ?? 'bg-gray-100 text-gray-500'}`}>
                           {capitalize(order.financial_status)}

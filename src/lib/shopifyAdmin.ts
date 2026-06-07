@@ -18,8 +18,10 @@ export interface ShopifyOrder {
   shipping_address: {
     name: string;
     address1: string;
+    address2?: string;
     city: string;
     province: string;
+    zip: string;
     phone: string | null;
   } | null;
   line_items: {
