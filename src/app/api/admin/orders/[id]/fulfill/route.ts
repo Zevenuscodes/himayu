@@ -37,7 +37,8 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   );
 
   if (!foRes.ok) {
-    return NextResponse.json({ error: 'Failed to get fulfillment orders' }, { status: 500 });
+    const errBody = await foRes.text();
+    return NextResponse.json({ error: `Shopify ${foRes.status}: ${errBody}` }, { status: 500 });
   }
 
   const foData = await foRes.json();
