@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   creator: 'Himayu Care',
   publisher: 'Himayu Care',
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  verification: { google: 'R7eGZFo3R6hQbwwxxiTSV60bmw7WSZJ4fblyzyPXgtc' },
   icons: {
     icon: '/logo.jpeg',
     shortcut: '/logo.jpeg',
