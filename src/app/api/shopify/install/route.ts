@@ -8,12 +8,14 @@ export async function GET() {
     : 'https://himayucare.com/api/shopify/callback';
   const scopes = 'read_orders,read_customers,write_fulfillments,read_merchant_managed_fulfillment_orders,write_merchant_managed_fulfillment_orders';
 
+  const state = crypto.randomUUID();
+
   const installUrl =
     `https://${shop}/admin/oauth/authorize` +
     `?client_id=${clientId}` +
     `&scope=${scopes}` +
     `&redirect_uri=${encodeURIComponent(redirectUri)}` +
-    `&state=himayuadmin`;
+    `&state=${state}`;
 
   return NextResponse.redirect(installUrl);
 }

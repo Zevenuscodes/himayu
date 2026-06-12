@@ -3,6 +3,20 @@ import { getSupabaseAdmin } from '@/lib/supabaseServer';
 
 const OMNIDIM_AGENT_ID = 180043;
 
+// Simple in-memory rate limit: max 3 submissions per IP per 10 minutes
+const ipSubmissions = new Map<string, { count: number; resetAt: number }>();
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = ipSubmissions.get(ip);
+  if (!entry || now > entry.resetAt) {
+    ipSubmissions.set(ip, { count: 1, resetAt: now + 10 * 60 * 1000 });
+    return false;
+  }
+  if (entry.count >= 3) return true;
+  entry.count++;
+  return false;
+}
+
 async function triggerOmnidimCall(lead: {
   name: string;
   phone: string;
@@ -45,6 +59,11 @@ async function triggerOmnidimCall(lead: {
 }
 
 export async function POST(req: NextRequest) {
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
+  if (isRateLimited(ip)) {
+    return NextResponse.json({ error: 'Too many submissions. Please try again later.' }, { status: 429 });
+  }
+
   try {
     const body = await req.json();
     const { name, phone, age, concern, city, preferred_time, email } = body;
