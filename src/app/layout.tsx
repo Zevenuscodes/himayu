@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   publisher: 'Himayu Care',
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   verification: { google: 'R7eGZFo3R6hQbwwxxiTSV60bmw7WSZJ4fblyzyPXgtc' },
+  alternates: { canonical: 'https://himayucare.com' },
   icons: {
     icon: '/logo.jpeg',
     shortcut: '/logo.jpeg',
