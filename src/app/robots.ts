@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: '*', allow: '/', disallow: ['/api/', '/cart', '/account'] },
+    rules: { userAgent: '*', allow: '/', disallow: ['/api/', '/cart', '/account', '/admin'] },
     sitemap: 'https://himayucare.com/sitemap.xml',
   };
 }
