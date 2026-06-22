@@ -3,6 +3,8 @@ import { getSupabaseAdmin } from '@/lib/supabaseServer';
 import { verifySessionToken } from '@/lib/adminAuth';
 import Anthropic from '@anthropic-ai/sdk';
 
+export const maxDuration = 60;
+
 export async function POST(req: NextRequest) {
   const token = req.cookies.get('admin_auth')?.value ?? '';
   if (!await verifySessionToken(token)) {
