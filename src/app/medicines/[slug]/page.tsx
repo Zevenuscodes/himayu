@@ -19,13 +19,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const med = getMedicinePage(slug);
   if (!med) return {};
+  const hindiLabel = med.hindiName ? ` | ${med.hindiName}` : '';
+  const title = `${med.name}${hindiLabel} — Benefits, Uses & Price | Himayu Care`;
+  const desc = `${med.description} Buy ${med.name} online at best price. ${med.hindiName ? `${med.hindiName} के फायदे, उपयोग और कीमत।` : ''} GMP certified, free doctor consultation on orders above ₹2000.`;
   return {
-    title: `${med.name} — ${med.tagline} | Himayu Care`,
-    description: med.description,
-    keywords: med.keywords.join(', '),
+    title,
+    description: desc,
+    keywords: [...med.keywords, `${med.name.toLowerCase()} benefits`, `${med.name.toLowerCase()} price`, `${med.name.toLowerCase()} ke fayde`, med.hindiName ?? ''].join(', '),
     openGraph: {
-      title: `${med.name} | Himayu Care`,
-      description: med.description,
+      title,
+      description: desc,
       type: 'website',
     },
     alternates: {
