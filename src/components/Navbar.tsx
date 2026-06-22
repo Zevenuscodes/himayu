@@ -14,6 +14,7 @@ export default function Navbar() {
   const links = [
     { href: '/', label: 'Home' },
     { href: '/products', label: 'Shop' },
+    { href: '/blog', label: 'Blog' },
     { href: '/consultation', label: 'Consult a Doctor' },
     { href: '/about', label: 'About' },
     { href: '#contact', label: 'Contact' },
