@@ -13,6 +13,7 @@ interface Post {
   title: string;
   meta_description: string;
   content: string;
+  cover_image_url: string;
   tags: string[];
   published_at: string;
   updated_at: string;
@@ -84,6 +85,12 @@ export default async function BlogPostPage({ params }: Props) {
         <Link href="/blog" className="inline-flex items-center gap-1 text-sm text-[#4a7c59] hover:underline mb-6">
           <ArrowLeft className="w-4 h-4" /> Back to Blog
         </Link>
+
+        {post.cover_image_url && (
+          <div className="rounded-2xl overflow-hidden mb-8 h-56 sm:h-72 lg:h-96">
+            <img src={post.cover_image_url} alt={post.title} className="w-full h-full object-cover" />
+          </div>
+        )}
 
         <header className="mb-8">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#2c2c2c] font-serif leading-tight mb-3">

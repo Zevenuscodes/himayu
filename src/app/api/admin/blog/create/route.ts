@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { title, content, meta_description, tags } = await req.json();
+  const { title, content, meta_description, tags, cover_image_url } = await req.json();
 
   if (!title?.trim() || !content?.trim()) {
     return NextResponse.json({ error: 'Title and content are required.' }, { status: 400 });
@@ -27,6 +27,7 @@ export async function POST(req: NextRequest) {
       title: title.trim(),
       content: content.trim(),
       meta_description: (meta_description || '').trim(),
+      cover_image_url: cover_image_url || '',
       tags: tags || [],
       status: 'draft',
     }])

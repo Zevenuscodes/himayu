@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { Plus, Loader2, X } from 'lucide-react';
+import { Plus, Loader2, X, ImagePlus } from 'lucide-react';
 
 export default function GenerateDraftButton() {
   const [open, setOpen] = useState(false);
@@ -10,16 +10,44 @@ export default function GenerateDraftButton() {
   const [content, setContent] = useState('');
   const [metaDesc, setMetaDesc] = useState('');
   const [tags, setTags] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
+  const [imagePreview, setImagePreview] = useState('');
+  const [uploading, setUploading] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const fileRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
   function reset() {
-    setTitle('');
-    setContent('');
-    setMetaDesc('');
-    setTags('');
+    setTitle(''); setContent(''); setMetaDesc(''); setTags('');
+    setImageUrl(''); setImagePreview(''); setError('');
+  }
+
+  async function handleImageUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setImagePreview(URL.createObjectURL(file));
+    setUploading(true);
     setError('');
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      const res = await fetch('/api/admin/blog/upload', { method: 'POST', body: formData });
+      const data = await res.json();
+      if (res.ok) {
+        setImageUrl(data.url);
+      } else {
+        setError(data.error ?? 'Image upload failed.');
+        setImagePreview('');
+      }
+    } catch {
+      setError('Image upload failed.');
+      setImagePreview('');
+    }
+    setUploading(false);
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -37,6 +65,7 @@ export default function GenerateDraftButton() {
           content: content.trim(),
           meta_description: metaDesc.trim(),
           tags: tags.split(',').map((t) => t.trim()).filter(Boolean),
+          cover_image_url: imageUrl,
         }),
       });
       const data = await res.json();
@@ -77,6 +106,37 @@ export default function GenerateDraftButton() {
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
+          <label className="block text-xs font-medium text-[#888] mb-1">Cover Image</label>
+          <input ref={fileRef} type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
+          {imagePreview ? (
+            <div className="relative w-full h-48 rounded-xl overflow-hidden border border-[#e0d8cc]">
+              <img src={imagePreview} alt="Preview" className="w-full h-full object-cover" />
+              {uploading && (
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <Loader2 className="w-6 h-6 text-white animate-spin" />
+                </div>
+              )}
+              <button
+                type="button"
+                onClick={() => { setImagePreview(''); setImageUrl(''); if (fileRef.current) fileRef.current.value = ''; }}
+                className="absolute top-2 right-2 bg-black/50 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-black/70"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => fileRef.current?.click()}
+              className="w-full h-32 rounded-xl border-2 border-dashed border-[#e0d8cc] flex flex-col items-center justify-center text-[#bbb] hover:border-[#4a7c59] hover:text-[#4a7c59] transition-colors"
+            >
+              <ImagePlus className="w-6 h-6 mb-1" />
+              <span className="text-xs">Click to upload cover image</span>
+            </button>
+          )}
+        </div>
+
+        <div>
           <label className="block text-xs font-medium text-[#888] mb-1">Title *</label>
           <input
             type="text"
@@ -89,7 +149,7 @@ export default function GenerateDraftButton() {
         </div>
 
         <div>
-          <label className="block text-xs font-medium text-[#888] mb-1">Meta Description (for Google snippet, max 160 chars)</label>
+          <label className="block text-xs font-medium text-[#888] mb-1">Meta Description (for Google, max 160 chars)</label>
           <input
             type="text"
             value={metaDesc}
@@ -101,14 +161,14 @@ export default function GenerateDraftButton() {
         </div>
 
         <div>
-          <label className="block text-xs font-medium text-[#888] mb-1">Content * (supports Markdown)</label>
+          <label className="block text-xs font-medium text-[#888] mb-1">Content * (Markdown supported)</label>
           <textarea
             value={content}
             onChange={(e) => setContent(e.target.value)}
-            placeholder="Write your blog post here... Use **bold**, ## headings, - bullet points"
+            placeholder={"Write your blog post here...\n\n## Use headings like this\n\n**Bold text** and *italic text*\n\n- Bullet points\n- Like this"}
             required
-            rows={12}
-            className="w-full border border-[#e0d8cc] rounded-xl px-4 py-3 text-sm text-[#2c2c2c] bg-white placeholder-[#bbb] focus:outline-none focus:border-[#4a7c59] transition-colors resize-y"
+            rows={14}
+            className="w-full border border-[#e0d8cc] rounded-xl px-4 py-3 text-sm text-[#2c2c2c] bg-white placeholder-[#bbb] focus:outline-none focus:border-[#4a7c59] transition-colors resize-y font-mono"
           />
         </div>
 
@@ -128,7 +188,7 @@ export default function GenerateDraftButton() {
         <div className="flex gap-3">
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || uploading}
             className="flex items-center gap-2 bg-[#4a7c59] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[#3a6347] transition-colors disabled:opacity-60"
           >
             {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
