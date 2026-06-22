@@ -6,9 +6,10 @@ import { Leaf } from 'lucide-react';
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: 'All Ayurvedic Medicines',
-  description: 'Shop GMP-certified Ayurvedic medicines online — Arks, Kwaths, Chyawanprash, Herbal Capsules and more. Pure Himalayan herbs, delivered across India.',
-  keywords: 'buy ayurvedic medicine online, ayurvedic ark, kwath powder, shadangpaaniya, kasni ark, dashmool ark, phalatrikadi kwath, chyawanprash, pilolin piles kit',
+  title: 'Buy Ayurvedic Medicines Online — GMP Certified | Himayu Care',
+  description: 'Shop GMP-certified classical Ayurvedic medicines online — Arks, Kwaths, Chyawanprash, herbal kits and Tail made from pure Himalayan herbs. Free doctor consultation on orders above ₹2000. Trusted by 2000+ patients across India.',
+  keywords: 'buy ayurvedic medicine online, ayurvedic medicine online india, ayurvedic ark, kwath powder, shadangpaaniya, kasni ark, dashmool ark, phalatrikadi kwath, chyawanprash, pilolin piles kit, ayurvedic medicine for piles, ayurvedic medicine for joint pain, ayurvedic medicine dehradun',
+  alternates: { canonical: '/products' },
 };
 
 export default async function ProductsPage() {

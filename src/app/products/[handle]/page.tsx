@@ -20,12 +20,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!product) return {};
     const info = getProductInfo(product.title);
     const image = product.images.edges[0]?.node.url;
+    const desc = info?.short
+      ? `${info.short} Buy ${product.title} online — GMP-certified Ayurvedic medicine from Himayu Care. Free consultation on orders above ₹2000.`
+      : `Buy ${product.title} online — GMP-certified classical Ayurvedic medicine from Himayu Care. Made from pure Himalayan herbs. Free doctor consultation on orders above ₹2000.`;
+    const keywords = [
+      product.title.toLowerCase(),
+      `buy ${product.title.toLowerCase()} online`,
+      `${product.title.toLowerCase()} price`,
+      `${product.title.toLowerCase()} benefits`,
+      'ayurvedic medicine online india',
+      'GMP certified ayurvedic medicine',
+    ].join(', ');
     return {
-      title: product.title,
-      description: product.description || info?.short || `Buy ${product.title} — GMP-certified Ayurvedic medicine from Himayu Care.`,
+      title: `Buy ${product.title} Online — GMP Certified | Himayu Care`,
+      description: desc,
+      keywords,
+      alternates: { canonical: `/products/${handle}` },
       openGraph: {
-        title: product.title,
-        description: product.description || info?.short || '',
+        title: `${product.title} | Himayu Care`,
+        description: desc,
         images: image ? [{ url: image }] : [],
         type: 'website',
       },
