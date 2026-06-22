@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m ' *)",
+      "Bash(git commit -m 'Show '\\\\''Ayurvedic Classic Formulation'\\\\'' label on Shadangpaneeya card *)",
+      "Bash(git commit -m 'Rename Shadangpaneeya to Shadangpaaniya throughout codebase *)",
+      "Bash(git commit -m 'Fix Shadangpaaniya category to '\\\\''Ayurvedic Classical Formulation'\\\\'' *)"
+    ]
+  }
+}
