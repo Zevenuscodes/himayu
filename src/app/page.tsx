@@ -4,6 +4,7 @@ import ProductCard from '@/components/ProductCard';
 import { Leaf, BadgeCheck, FlaskConical, Shield, Truck, Handshake } from 'lucide-react';
 import HeroVisual from '@/components/HeroVisual';
 import NewLaunchCarousel from '@/components/NewLaunchCarousel';
+import NewLaunchPopup from '@/components/NewLaunchPopup';
 
 export default async function HomePage() {
   let featuredProducts: ShopifyProduct[] = [];
@@ -62,6 +63,7 @@ export default async function HomePage() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <NewLaunchPopup />
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#f5f0e8] via-[#eef5ec] to-[#f5f0e8]">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

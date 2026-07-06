@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { CheckCircle2, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -85,18 +84,9 @@ export default function NewLaunchCarousel() {
             ))}
           </ul>
 
-          {slide.link ? (
-            <Link
-              href={slide.link}
-              className="mt-10 inline-flex items-center gap-2 bg-[#c8a87a] text-[#1a3a2a] text-base font-bold px-7 py-3 rounded-full hover:bg-[#b8986a] transition-colors"
-            >
-              {slide.status} →
-            </Link>
-          ) : (
-            <div className="mt-10 inline-flex items-center gap-2 bg-white/10 text-white text-base font-bold px-7 py-3 rounded-full">
-              {slide.status}
-            </div>
-          )}
+          <div className="mt-10 inline-flex items-center gap-2 bg-[#c8a87a]/20 text-[#c8a87a] text-sm font-semibold px-5 py-2.5 rounded-full border border-[#c8a87a]/30">
+            <Sparkles className="w-4 h-4" /> Now Available
+          </div>
         </div>
 
         {/* Image */}
