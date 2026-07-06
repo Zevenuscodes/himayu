@@ -758,36 +758,37 @@ This integrated approach makes Pilolin Kit highly effective for both internal an
     category: 'Ayurvedic Proprietary Formulation',
     form: 'Capsule',
     netWeight: '60 Capsules',
-    description: 'New Ayurvedic capsule formulation for joint pain, nerve weakness and lasting mobility — Coming Soon.',
-    longDescription: `Himayu Neurojoint Care is Himayu Care's newest Ayurvedic proprietary formulation, developed for individuals suffering from joint pain, nerve weakness and restricted mobility. Combining six time-tested herbs known for their anti-inflammatory, nerve-nourishing and Vata-pacifying properties, Neurojoint offers a natural path to lasting relief.
+    description: 'Ayurvedic capsule for arthritis, joint pain, paralysis, neuropathic pain, cervical & lumbar spondylosis and all Vataj disorders. Each 500mg capsule contains 6 classical preparations.',
+    longDescription: `Himayu Neurojoint Care is an advanced Ayurvedic proprietary formulation for joint and nerve health. Each 500mg capsule is a precise blend of six classical Ayurvedic preparations — Ras, Guggulu and Bhasm — time-tested for their anti-inflammatory, nerve-nourishing and Vata-pacifying properties.
 
-The formulation addresses multiple aspects of joint and nerve health simultaneously — reducing inflammation, nourishing nerve tissue, strengthening muscles and improving overall mobility. This makes it particularly effective for conditions like osteoarthritis, rheumatoid arthritis, sciatica and general joint degeneration.
+The formulation targets multiple root causes simultaneously: reducing inflammation, nourishing nerve tissue, strengthening muscles and improving overall mobility. It is particularly effective for arthritis (गठिया), joint pain (जोड़ों का दर्द), paralysis (लकवा), neuropathic pain (नसों का दर्द), muscular pain, cervical and lumbar spondylosis and all Vataj Vyadhi (वातज व्याधियां).
 
-Formulated under GMP-certified conditions at Hans Herbals Pvt Ltd, Haridwar, Himayu Neurojoint Care is currently in its final stages before launch. Each capsule delivers a precise, therapeutic dose of potent Himalayan botanicals.`,
+Manufactured under GMP-certified conditions, each batch is quality-tested for consistency and purity. Himayu Neurojoint Care offers a natural, side-effect-free path to lasting joint and nerve relief.`,
     benefits: [
-      'Joint pain and stiffness (Sandhivata)',
-      'Nerve weakness and neuropathy (Vata disorders)',
-      'Arthritis — Osteoarthritis and Rheumatoid',
-      'Restricted movement and flexibility',
-      'Muscle weakness and fatigue',
-      'Post-injury recovery and inflammation',
+      'Arthritis — Osteoarthritis and Rheumatoid (गठिया)',
+      'Joint pain and stiffness (जोड़ों का दर्द)',
+      'Paralysis and nerve weakness (लकवा)',
+      'Neuropathic and muscular pain (नसों का दर्द)',
+      'Cervical and lumbar spondylosis',
+      'All Vataj Vyadhi (वातज व्याधियों का उपचार)',
     ],
     ingredients: [
-      { name: 'अश्वगंधा (Ashwagandha)', latin: 'Withania somnifera' },
-      { name: 'शल्लकी (Shallaki)', latin: 'Boswellia serrata' },
-      { name: 'गुग्गुलु (Guggulu)', latin: 'Commiphora mukul' },
-      { name: 'निर्गुण्डी (Nirgundi)', latin: 'Vitex negundo' },
-      { name: 'रास्ना (Rasna)', latin: 'Pluchea lanceolata' },
-      { name: 'एरण्ड (Eranda)', latin: 'Ricinus communis' },
+      { name: 'Mahavatvidhvansan Ras', latin: 'Classical preparation', quantity: '40 mg' },
+      { name: 'Mahayograj Guggulu', latin: 'Classical preparation', quantity: '70 mg' },
+      { name: 'Ekangveer Ras', latin: 'Classical preparation', quantity: '40 mg' },
+      { name: 'Singhnad Guggulu', latin: 'Classical preparation', quantity: '300 mg' },
+      { name: 'Godanti Bhasm', latin: 'Classical preparation', quantity: '20 mg' },
+      { name: 'Sameer Pannag Ras', latin: 'Classical preparation', quantity: '30 mg' },
     ],
-    dosage: 'Coming Soon — dosage instructions will be provided on the product label.',
+    dosage: '1–2 capsules twice daily with warm water or milk, or as directed by your Ayurvedic physician. Each capsule: 500mg.',
     faqs: [
-      { q: 'What is Himayu Neurojoint Care?', a: 'Neurojoint Care is an Ayurvedic capsule formulation for joint pain, nerve weakness and mobility. It contains 6 classical herbs including Ashwagandha, Shallaki and Guggulu.' },
-      { q: 'When will Neurojoint Care be available?', a: 'Himayu Neurojoint Care is launching shortly. Follow us on Instagram @himayucare for updates.' },
-      { q: 'Is Neurojoint Care good for arthritis?', a: 'Yes, Neurojoint Care is formulated to address both osteoarthritis and rheumatoid arthritis through its anti-inflammatory and Vata-pacifying herbs.' },
+      { q: 'What is Himayu Neurojoint Care used for?', a: 'Neurojoint Care is used for arthritis, joint pain, paralysis, neuropathic pain, muscular pain, cervical and lumbar spondylosis and all Vata disorders.' },
+      { q: 'What are the ingredients in Neurojoint Care?', a: 'Each 500mg capsule contains: Mahavatvidhvansan Ras 40mg, Mahayograj Guggulu 70mg, Ekangveer Ras 40mg, Singhnad Guggulu 300mg, Godanti Bhasm 20mg and Sameer Pannag Ras 30mg.' },
+      { q: 'Is Neurojoint Care good for spondylosis?', a: 'Yes, Neurojoint Care is specifically indicated for both cervical and lumbar spondylosis due to its Vata-pacifying and nerve-nourishing ingredients.' },
+      { q: 'How many capsules are in one pack?', a: 'Each pack contains 60 capsules.' },
     ],
     shopifyHandle: 'neurojoint',
-    keywords: ['neurojoint', 'himayu neurojoint care', 'joint pain ayurvedic medicine', 'arthritis capsule ayurveda', 'nerve weakness ayurveda', 'ashwagandha shallaki guggulu'],
+    keywords: ['neurojoint', 'himayu neurojoint care', 'joint pain ayurvedic capsule', 'arthritis ayurvedic medicine', 'spondylosis ayurvedic treatment', 'neuropathic pain ayurveda', 'singhnad guggulu', 'mahayograj guggulu', 'vataj vyadhi'],
     image: '/neurojoint.png',
   },
   {
