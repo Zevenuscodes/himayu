@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { CheckCircle2, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -18,7 +19,8 @@ const slides = [
     ],
     image: '/neurojoint.png',
     imageAlt: 'Himayu Neurojoint Care — 60 Capsules',
-    status: 'Coming Soon',
+    status: 'Buy Now',
+    link: '/medicines/neurojoint',
     tags: ['Joint', 'Nerve', 'Mobility'],
   },
   {
@@ -35,6 +37,7 @@ const slides = [
     image: '/bastikalpa.jpeg',
     imageAlt: 'Himayu Basti Kalpa Churna — 250g',
     status: 'Coming Soon',
+    link: null,
     tags: ['Vata', 'Churna', 'Ayurvedic'],
   },
 ];
@@ -82,9 +85,18 @@ export default function NewLaunchCarousel() {
             ))}
           </ul>
 
-          <div className="mt-10 inline-flex items-center gap-2 bg-[#c8a87a] text-[#1a3a2a] text-base font-bold px-7 py-3 rounded-full">
-            {slide.status}
-          </div>
+          {slide.link ? (
+            <Link
+              href={slide.link}
+              className="mt-10 inline-flex items-center gap-2 bg-[#c8a87a] text-[#1a3a2a] text-base font-bold px-7 py-3 rounded-full hover:bg-[#b8986a] transition-colors"
+            >
+              {slide.status} →
+            </Link>
+          ) : (
+            <div className="mt-10 inline-flex items-center gap-2 bg-white/10 text-white text-base font-bold px-7 py-3 rounded-full">
+              {slide.status}
+            </div>
+          )}
         </div>
 
         {/* Image */}
