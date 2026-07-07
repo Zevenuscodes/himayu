@@ -41,27 +41,28 @@ export default function NewLaunchPopup() {
       />
 
       {/* Modal */}
-      <div className="relative bg-[#fdfbf7] rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden animate-fade-in-up">
+      <div className="relative bg-[#fdfbf7] rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden animate-fade-in-up">
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#1a3a2a] to-[#2e5c3e] px-6 py-5 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-[#c8a87a]" />
-            <span className="text-white font-bold text-lg tracking-wide">New Launches</span>
-            <span className="bg-[#c8a87a] text-[#1a3a2a] text-xs font-bold px-2.5 py-0.5 rounded-full ml-1">2026</span>
+        <div className="bg-gradient-to-r from-[#1a3a2a] to-[#2e5c3e] px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2 min-w-0">
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#c8a87a] flex-shrink-0" />
+            <span className="text-white font-bold text-base sm:text-lg tracking-wide truncate">New Launches</span>
+            <span className="bg-[#c8a87a] text-[#1a3a2a] text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0">2026</span>
           </div>
           <button
             onClick={() => setOpen(false)}
-            className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+            className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors border border-white/30"
+            aria-label="Close"
           >
-            <X className="w-4 h-4 text-white" />
+            <X className="w-5 h-5 text-white" />
           </button>
         </div>
 
         {/* Products */}
         <div className="grid sm:grid-cols-2 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-[#e8e0d0]">
           {launches.map((p) => (
-            <div key={p.name} className="p-6 flex flex-col items-center text-center gap-4">
-              <div className="relative w-36 h-36 flex-shrink-0">
+            <div key={p.name} className="p-4 sm:p-6 flex flex-col items-center text-center gap-3 sm:gap-4">
+              <div className="relative w-28 h-28 sm:w-36 sm:h-36 flex-shrink-0">
                 <Image
                   src={p.image}
                   alt={p.name}
