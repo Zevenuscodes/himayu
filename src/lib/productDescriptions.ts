@@ -507,6 +507,33 @@ const catalogue: { keywords: string[]; info: ProductInfo }[] = [
       category: 'Ayurvedic Classical Oil',
     },
   },
+  {
+    keywords: ['basti kalpa', 'basti-kalpa', 'bastikalpa'],
+    info: {
+      short: 'Classical eight-herb churna for swelling, inflammation & Vata disorders.',
+      description: 'Himayu Basti Kalpa Churna is an Ayurvedic proprietary medicine useful as Basti Kalka in Panchakarma therapy. Each 10gm contains eight classical herbs at 1.25gm each — indicated for swelling, abdominal colic and all Vata-related disorders.',
+      benefits: [
+        'Useful as Basti Kalka in Panchakarma therapy',
+        'Swelling and inflammation (शोथ)',
+        'Abdominal colic and pain (शूल)',
+        'Vata-related disorders (वात दोष)',
+        'Digestive imbalance and gut health',
+      ],
+      ingredients: [
+        { name: 'यवानी (Yavani)', latin: 'Trachyspermum ammi', quantity: '1.25gm' },
+        { name: 'मदनफल (Madanphal)', latin: 'Randia dumetorum', quantity: '1.25gm' },
+        { name: 'बिल्व (Bilwa)', latin: 'Aegle marmelos', quantity: '1.25gm' },
+        { name: 'कुष्ठ (Kushtha)', latin: 'Saussurea lappa', quantity: '1.25gm' },
+        { name: 'वचा (Vacha)', latin: 'Acorus calamus', quantity: '1.25gm' },
+        { name: 'शतपुष्पा (Shatapushpa)', latin: 'Anethum sowa', quantity: '1.25gm' },
+        { name: 'मुस्ता (Musta)', latin: 'Cyperus rotundus', quantity: '1.25gm' },
+        { name: 'पिप्पली (Pippali)', latin: 'Piper longum', quantity: '1.25gm' },
+      ],
+      form: 'Churna (Powder)',
+      netWeight: '250g',
+      category: 'Ayurvedic Proprietary Medicine',
+    },
+  },
 ];
 
 export function getProductInfo(title: string): ProductInfo | null {
