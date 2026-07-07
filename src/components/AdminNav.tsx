@@ -1,11 +1,12 @@
 import Link from 'next/link';
-import { Users, ShoppingBag, FileText } from 'lucide-react';
+import { Users, ShoppingBag, FileText, Star } from 'lucide-react';
 
-export default function AdminNav({ active }: { active: 'leads' | 'orders' | 'blog' }) {
+export default function AdminNav({ active }: { active: 'leads' | 'orders' | 'blog' | 'reviews' }) {
   const tabs = [
     { href: '/admin/leads', label: 'Leads', icon: Users, key: 'leads' as const },
     { href: '/admin/orders', label: 'Orders', icon: ShoppingBag, key: 'orders' as const },
     { href: '/admin/blog', label: 'Blog', icon: FileText, key: 'blog' as const },
+    { href: '/admin/reviews', label: 'Reviews', icon: Star, key: 'reviews' as const },
   ];
 
   return (

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Leaf, CheckCircle2, FlaskConical, ArrowRight, Shield, RotateCcw } from 'lucide-react';
 import { medicinePages, getMedicinePage } from '@/lib/medicinePages';
 import MedicineFAQ from '@/components/MedicineFAQ';
+import ReviewSection from '@/components/ReviewSection';
 
 export const revalidate = 3600;
 
@@ -188,6 +189,9 @@ export default async function MedicinePage({ params }: Props) {
             <MedicineFAQ faqs={med.faqs} />
           </section>
         )}
+
+        {/* Reviews */}
+        <ReviewSection productHandle={med.shopifyHandle} productName={med.name} />
 
         {/* CTA */}
         <section className="bg-[#4a7c59]/5 border border-[#4a7c59]/20 rounded-2xl p-8 text-center">
