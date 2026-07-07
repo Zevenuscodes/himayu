@@ -5,6 +5,7 @@ import { medicinePages } from '@/lib/medicinePages';
 import { notFound, redirect } from 'next/navigation';
 import Image from 'next/image';
 import ProductActions from '@/components/ProductActions';
+import ReviewSection from '@/components/ReviewSection';
 import { Leaf, RotateCcw, Shield, CheckCircle2, FlaskConical } from 'lucide-react';
 
 export const revalidate = 60;
@@ -233,6 +234,8 @@ export default async function ProductPage({ params }: Props) {
             ))}
           </div>
         )}
+
+        <ReviewSection productHandle={handle} productName={product.title} />
       </div>
     </main>
   );
