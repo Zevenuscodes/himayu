@@ -18,7 +18,7 @@ const launches = [
     subtitle: '250g · Ayurvedic Proprietary',
     desc: 'Classical eight-herb formula for swelling, inflammation and Vataj disorders.',
     image: '/bastikalpa.jpeg',
-    link: null,
+    link: '/products/basti-kalpa-churna',
   },
 ];
 
