@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     rating,
     review_text: review_text.trim(),
     verified_purchase: false,
-    status: 'pending',
+    status: 'approved',
   }]);
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });

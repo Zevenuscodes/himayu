@@ -32,7 +32,7 @@ export default async function AdminReviewsPage() {
     error = (e as Error).message;
   }
 
-  const pending = reviews.filter((r) => r.status === 'pending').length;
+  const total = reviews.length;
 
   return (
     <main className="min-h-screen bg-[#faf8f3] pt-6 pb-16 px-4">
@@ -42,7 +42,7 @@ export default async function AdminReviewsPage() {
             <h1 className="text-2xl font-bold text-[#2c2c2c] flex items-center gap-2">
               <Star className="w-6 h-6 text-[#4a7c59]" /> Reviews
             </h1>
-            <p className="text-sm text-[#888] mt-0.5">{pending} pending approval</p>
+            <p className="text-sm text-[#888] mt-0.5">{total} review{total !== 1 ? 's' : ''}</p>
           </div>
           <a href="/admin/login" className="text-xs text-[#aaa] hover:text-[#4a7c59] transition-colors">Logout</a>
         </div>
@@ -58,16 +58,6 @@ export default async function AdminReviewsPage() {
                 <div className="min-w-0">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
                     <p className="font-semibold text-[#2c2c2c]">{review.name}</p>
-                    <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${
-                      review.status === 'approved' ? 'bg-green-100 text-green-700' :
-                      review.status === 'rejected' ? 'bg-red-100 text-red-600' :
-                      'bg-yellow-100 text-yellow-700'
-                    }`}>
-                      {review.status.charAt(0).toUpperCase() + review.status.slice(1)}
-                    </span>
-                    {review.verified_purchase && (
-                      <span className="text-xs font-medium bg-blue-50 text-blue-600 px-2.5 py-0.5 rounded-full">Verified</span>
-                    )}
                   </div>
                   <p className="text-xs text-[#4a7c59] font-medium mb-1">{review.product_name}</p>
                   <div className="flex items-center gap-1 mb-2">
