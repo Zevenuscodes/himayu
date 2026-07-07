@@ -11,7 +11,7 @@ const launches = [
     subtitle: '60 Capsules · Ayurvedic Proprietary',
     desc: 'For arthritis, joint pain, paralysis, neuropathic pain, cervical & lumbar spondylosis.',
     image: '/neurojoint.png',
-    link: '/products/neurojoint',
+    link: '/products/himayu-pilolin-capsule',
   },
   {
     name: 'Himayu Basti Kalpa Churna',

@@ -19,7 +19,7 @@ const slides = [
     image: '/neurojoint.png',
     imageAlt: 'Himayu Neurojoint Care — 60 Capsules',
     status: 'Buy Now',
-    link: '/products/neurojoint',
+    link: '/products/himayu-pilolin-capsule',
     tags: ['Joint', 'Nerve', 'Mobility'],
   },
   {
