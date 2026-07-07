@@ -9,7 +9,6 @@ interface Review {
   name: string;
   rating: number;
   review_text: string;
-  verified_purchase: boolean;
   created_at: string;
 }
 
@@ -18,7 +17,6 @@ export default function ReviewSection({ productHandle, productName }: { productH
   const [showForm, setShowForm] = useState(false);
   const [rating, setRating] = useState(0);
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
   const [reviewText, setReviewText] = useState('');
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -43,7 +41,7 @@ export default function ReviewSection({ productHandle, productName }: { productH
     const res = await fetch('/api/reviews', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ product_handle: productHandle, product_name: productName, name, phone, rating, review_text: reviewText }),
+      body: JSON.stringify({ product_handle: productHandle, product_name: productName, name, rating, review_text: reviewText }),
     });
     const data = await res.json();
 
@@ -99,23 +97,13 @@ export default function ReviewSection({ productHandle, productName }: { productH
               <label className="block text-xs font-medium text-[#888] mb-2">Your Rating *</label>
               <StarSelector value={rating} onChange={setRating} />
             </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-medium text-[#888] mb-1">Your Name *</label>
-                <input
-                  value={name} onChange={(e) => setName(e.target.value)} required
-                  placeholder="e.g. Rajesh Kumar"
-                  className="w-full border border-[#e0d8cc] rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#4a7c59] transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-medium text-[#888] mb-1">Phone Number (for purchase verification) *</label>
-                <input
-                  value={phone} onChange={(e) => setPhone(e.target.value)} required
-                  placeholder="10-digit mobile number"
-                  className="w-full border border-[#e0d8cc] rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#4a7c59] transition-colors"
-                />
-              </div>
+            <div>
+              <label className="block text-xs font-medium text-[#888] mb-1">Your Name *</label>
+              <input
+                value={name} onChange={(e) => setName(e.target.value)} required
+                placeholder="e.g. Rajesh Kumar"
+                className="w-full border border-[#e0d8cc] rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#4a7c59] transition-colors"
+              />
             </div>
             <div>
               <label className="block text-xs font-medium text-[#888] mb-1">Your Review *</label>
@@ -126,7 +114,6 @@ export default function ReviewSection({ productHandle, productName }: { productH
               />
             </div>
             {error && <p className="text-red-500 text-xs">{error}</p>}
-            <p className="text-xs text-[#aaa]">Only verified buyers can leave reviews. Your phone number is used only for verification and is never displayed.</p>
             <div className="flex gap-3">
               <button type="submit" disabled={loading}
                 className="flex items-center gap-2 bg-[#4a7c59] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#3a6347] transition-colors disabled:opacity-60"
@@ -158,12 +145,7 @@ export default function ReviewSection({ productHandle, productName }: { productH
                   <StarDisplay rating={r.rating} size="sm" />
                 </div>
                 <div className="text-right">
-                  {r.verified_purchase && (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full">
-                      <CheckCircle2 className="w-3 h-3" /> Verified Purchase
-                    </span>
-                  )}
-                  <p className="text-xs text-[#aaa] mt-1">
+                  <p className="text-xs text-[#aaa]">
                     {new Date(r.created_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}
                   </p>
                 </div>
