@@ -873,6 +873,49 @@ Himayu Care's Saindhavadi Tail is prepared following authentic classical proport
     shopifyHandle: 'saindhavadi-tail',
     keywords: ['saindhavadi tail', 'saindhavadi taila', 'सेन्धवादि तेल', 'saindhavadi tel', 'saindhava oil', 'joint pain oil', 'arthritis oil ayurvedic', 'back pain oil ayurveda', 'sciatica oil'],
   },
+  {
+    slug: 'basti-kalpa-churna',
+    name: 'Himayu Basti Kalpa Churna',
+    hindiName: 'बस्ती कल्प चूर्ण',
+    tagline: 'Classical Eight-Herb Churna for Swelling, Inflammation & Vata Disorders',
+    category: 'Ayurvedic Proprietary Medicine',
+    form: 'Churna (Powder)',
+    netWeight: '250g',
+    description: 'Classical Ayurvedic churna useful as Basti Kalka for swelling, inflammation and Vata-related disorders. Each 10gm contains eight potent herbs at 1.25gm each.',
+    longDescription: `Himayu Basti Kalpa Churna (बस्ती कल्प चूर्ण) is an Ayurvedic proprietary medicine prepared from eight classical herbs, each at an equal potency of 1.25gm per 10gm dose. The formulation is specifically designed for use as a Basti Kalka — a medicated paste or powder used in Panchakarma Basti (medicated enema) therapy.
+
+Basti is considered one of the most powerful Panchakarma procedures for pacifying Vata dosha, which is the root cause of most inflammatory and degenerative conditions in Ayurveda. Himayu Basti Kalpa Churna combines Yavani, Madanphal, Bilwa, Kushtha, Vacha, Shatapushpa, Musta and Pippali — herbs classically prescribed for their Vata-pacifying, anti-inflammatory and digestive properties.
+
+The formulation is useful in swelling (शोथ), abdominal colic (शूल), and all Vata-dominant conditions. It is manufactured under GMP-certified conditions by Gayatri Herbals, Haridwar, and marketed by Himayu Care, Dehradun.`,
+    benefits: [
+      'Useful as Basti Kalka in Panchakarma therapy',
+      'Swelling and inflammation (शोथ)',
+      'Abdominal colic and pain (शूल)',
+      'Vata-related disorders (वात दोष)',
+      'Digestive imbalance and gut health',
+      'Classical Ayurvedic formulation — GMP certified',
+    ],
+    ingredients: [
+      { name: 'यवानी (Yavani)', latin: 'Trachyspermum ammi', quantity: '1.25gm per 10gm' },
+      { name: 'मदनफल (Madanphal)', latin: 'Randia dumetorum', quantity: '1.25gm per 10gm' },
+      { name: 'बिल्व (Bilwa)', latin: 'Aegle marmelos', quantity: '1.25gm per 10gm' },
+      { name: 'कुष्ठ (Kushtha)', latin: 'Saussurea lappa', quantity: '1.25gm per 10gm' },
+      { name: 'वचा (Vacha)', latin: 'Acorus calamus', quantity: '1.25gm per 10gm' },
+      { name: 'शतपुष्पा (Shatapushpa)', latin: 'Anethum sowa', quantity: '1.25gm per 10gm' },
+      { name: 'मुस्ता (Musta)', latin: 'Cyperus rotundus', quantity: '1.25gm per 10gm' },
+      { name: 'पिप्पली (Pippali)', latin: 'Piper longum', quantity: '1.25gm per 10gm' },
+    ],
+    dosage: 'As directed by the physician. मात्रा: चिकित्सक के परामर्शानुसार।',
+    faqs: [
+      { q: 'What is Basti Kalpa Churna used for?', a: 'Himayu Basti Kalpa Churna is used as a Basti Kalka in Panchakarma therapy. It is indicated for swelling, inflammation, abdominal colic and Vata-related disorders.' },
+      { q: 'What does Basti Kalpa Churna contain?', a: 'Each 10gm contains: Yavani, Madanphal, Bilwa, Kushtha, Vacha, Shatapushpa, Musta and Pippali — each at 1.25gm, plus excipients q.s.' },
+      { q: 'How is Basti Kalpa Churna used?', a: 'It is used as directed by an Ayurvedic physician, typically as part of Basti (medicated enema) Panchakarma therapy.' },
+      { q: 'Is Basti Kalpa Churna GMP certified?', a: 'Yes, it is manufactured under GMP-certified conditions by Gayatri Herbals, Haridwar, Uttarakhand and marketed by Himayu Care.' },
+    ],
+    shopifyHandle: 'himayu-basti-kalpa-churna',
+    keywords: ['basti kalpa churna', 'बस्ती कल्प चूर्ण', 'himayu basti kalpa', 'basti kalka ayurveda', 'panchakarma churna', 'vata disorder ayurvedic medicine', 'swelling ayurvedic medicine', 'basti kalpa churna price'],
+    image: '/bastikalpa.jpeg',
+  },
 ];
 
 export function getMedicinePage(slug: string): MedicinePage | null {
