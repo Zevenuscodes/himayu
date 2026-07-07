@@ -36,7 +36,7 @@ const slides = [
     image: '/bastikalpa.jpeg',
     imageAlt: 'Himayu Basti Kalpa Churna — 250g',
     status: 'Now Available',
-    link: '/products/basti-kalpa-churna',
+    link: '/products/himayu-basti-kalpa-churna',
     tags: ['Vata', 'Churna', 'Ayurvedic'],
   },
 ];
